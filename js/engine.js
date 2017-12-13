@@ -1086,6 +1086,7 @@ MqoMesh.prototype._parseVertices = function(num, text) {
 
 MqoMesh.prototype._parseFaces = function(num, text) {
   var faceTextList = text.split('\n');
+  console.log('faceTextList = '+faceTextList);
 
   var calcNormalize = function(a, b, c)
   {
@@ -1113,10 +1114,13 @@ MqoMesh.prototype._parseFaces = function(num, text) {
   for (var i = 1; i <= num; ++i) {
     // ƒgƒŠƒ€‚Á‚Æ‚­
     var faceText = faceTextList[i].replace(/^\s+|\s+$/g, '');
+    console.log('faceText = '+faceText);
     // –Ê‚Ì”
     var vertex_num = Number(faceText[0]);
 
     var info = faceText.match(/([A-Za-z]+)\(([\w\s\-\.\(\)]+?)\)/gi);
+    console.log('info = '+info);
+    console.log('len = '+len);
     var face = { vNum: vertex_num };
 
     for (var j = 0, len = info.length; j < len; ++j) {
