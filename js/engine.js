@@ -1000,7 +1000,7 @@ MqoConverter.toTHREEJS_Geometry = function(mqo, options) {
  * @returns {Array|*|dojo|NodeList}
  */
 MqoConverter.generateMaterials = function(mqoMaterials, texturePath) {
-  // Materials List
+  // マテリアルリスト
   return mqoMaterials.map(function(mqoMaterial) {
     var material = null;
     if(mqoMaterial.shader == 2) {
@@ -1071,7 +1071,7 @@ MqoConverter.generateGeometry = function(mqoMesh, scale) {
     ));
   }
 
-  // Check
+  // チェック
   var smoothingValue = Math.cos(mqoMesh.facet * Math.PI / 180);
   var checkVertexNormalize = function(n, vn)
   {
@@ -1079,18 +1079,18 @@ MqoConverter.generateGeometry = function(mqoMesh, scale) {
     return (c > smoothingValue) ? vn : n;
   };
 
-  // create indices and uv
+  // indices と uv を作成
   for (var i = 0; i < mqoMesh.faces.length; ++i) {
     var face = mqoMesh.faces[i];
     var vIndex = face.v;
     var index = geometry.vertices.length;
 
     if (face.vNum == 3) {
-      // Vertex index
+      // 頂点インデックス
       var face3 = new THREE.Face3(vIndex[2], vIndex[1], vIndex[0], undefined, undefined, face.m[0]);
       geometry.faces.push(face3);
 
-      // Normal
+      // 法線
       var n = face.n;
       var tn = []
       for(var j = 0; j < 3; ++j) {
@@ -1114,7 +1114,7 @@ MqoConverter.generateGeometry = function(mqoMesh, scale) {
       ]);
     }
     else if (face.vNum == 4) {
-      // Normal
+      // 法線
       var n = face.n;
       var tn = []
       for(var j = 0; j < 4; ++j) {
@@ -1164,7 +1164,7 @@ MqoConverter.generateGeometry = function(mqoMesh, scale) {
 };
 
 /**
- * Return compressed Object
+ * 圧縮されたOBJECTを返す
  * @param mqo
  * @param scale
  * @returns {{materials: (THREE.JSONLoader.parse.materials|*|materials|Array|.materials.materials|THREE.MeshFaceMaterial.materials), vertices: (Array|*), faces: (Array|*), uv: (Array|*|dojo|NodeList)}}
@@ -1270,7 +1270,7 @@ var Mqo = function()
 };
 
 Mqo.prototype.parse = function(text) {
-  // Parse Object
+  // オブジェクトをパース
   var objectTextList = text.match(/^Object [\s\S]*?^\}/gm);
 
   for (var i = 0, len = objectTextList.length; i < len; ++i) {
@@ -1280,7 +1280,7 @@ Mqo.prototype.parse = function(text) {
     this.meshes.push(mesh);
   }
 
-  // Materials
+  // マテリアル
   var materialText = text.match(/^Material [\s\S]*?^\}/m);
   if (materialText) {
     this.materials = this._parseMaterials(materialText[0]);
@@ -1288,38 +1288,38 @@ Mqo.prototype.parse = function(text) {
 }
 
 /**
-* Metasequoia Mesh
+* メタセコメッシュ
 */
 var MqoMesh = function() {
-  this.name = '';       // Name
-  this.vertices = [];   // Vertex
-  this.faces = [];   // Faces information
-  this.vertNorms = [];   // Vertex Normal
+  this.name = '';       //名前
+  this.vertices = [];   // 頂点
+  this.faces = [];   // 面情報
+  this.vertNorms = [];   // 頂点法線
 
-  this.facet = 59.5;     // Smoothing deg
-  this.depth = 0;        // Depth of Layers
+  this.facet = 59.5;     // スムージング角度
+  this.depth = 0;        // 階層の深さ
   this.mirror = 0;
   this.mirrorAxis = 0;
 };
 
 MqoMesh.prototype.parse = function(text) {
-  // Name
+  // 名前
   var name = text.match(/^Object[\s\S]+\"([^\"]+)?\"/);
   if (name) { this.name = name[1]; }
 
-  // Smoothing deg
+  // スムージング角
   var facet = text.match(/facet ([0-9\.]+)/);
   if (facet) { this.facet = Number(facet[1]); }
 
-  // Depth of Layers
+  //階層の深さ
   var depth = text.match(/depth ([0-9\.]+)/);
   if (depth) { this.depth = Number(depth[1]); }
 
-  // Mirror
+  // ミラー
   var mirror = text.match(/mirror ([0-9])/m);
   if (mirror) {
     this.mirror = Number(mirror[1]);
-    // Axis
+    // 軸
     var mirrorAxis = text.match(/mirror_axis ([0-9])/m);
     if (mirrorAxis) {
       this.mirrorAxis = Number(mirrorAxis[1]);
@@ -1389,9 +1389,9 @@ MqoMesh.prototype._parseFaces = function(num, text) {
   };
 
   for (var i = 1; i <= num; ++i) {
-    // trim
+    // トリムっとく
     var faceText = faceTextList[i].replace(/^\s+|\s+$/g, '');
-    // Vertex Number
+    // 面の数
     var vertex_num = Number(faceText[0]);
 
     var info = faceText.match(/([A-Za-z]+)\(([\w\s\-\.\(\)]+?)\)/gi);
@@ -1407,15 +1407,15 @@ MqoMesh.prototype._parseFaces = function(num, text) {
       face[key] = value;
     }
 
-    // UV Default
+    // UV デフォルト値
     if (!face.uv) {
       face.uv = [0, 0, 0, 0, 0, 0, 0, 0];
     }
 
-    // Material Default
+    // マテリアル デフォルト値
     if (!face.m) face.m = [undefined];
 
-    // Calc Normal
+    // 法線計算
     if(face.v.length === 3) {
       face.n = calcNormalize(this.vertices[face.v[0]], this.vertices[face.v[1]], this.vertices[face.v[2]]);
 
@@ -1434,7 +1434,7 @@ MqoMesh.prototype._parseFaces = function(num, text) {
     this.faces.push(face);
   }
 
-  // Process Mirror
+  // ミラー対応
   if (this.mirror) {
     var swap = function(a, b) { var temp = this[a]; this[a] = this[b]; this[b] = temp; return this; };
     var len = this.faces.length;
@@ -1474,7 +1474,7 @@ MqoMesh.prototype._parseFaces = function(num, text) {
     }
   }
 
-  // Get Vertex Normal
+  // 頂点法線を求める
   var vertNorm = Array(this.vertices.length);
   for (var i = 0, len = this.vertices.length; i < len; ++i) vertNorm[i] = [];
 
@@ -1513,7 +1513,7 @@ MqoMesh.prototype._parseFaces = function(num, text) {
 };
 
 /**
-* Materials for Metasequoia
+* メタセコ用マテリアル
 */
 Mqo.prototype._parseMaterials = function(text) {
   var infoText = text.match(/^Material [0-9]* \{\r\n([\s\S]*?)\n^\}$/m);
@@ -1523,7 +1523,7 @@ Mqo.prototype._parseMaterials = function(text) {
 
   for (var i = 0, len = matTextList.length; i < len; ++i) {
     var mat = {};
-    // trim
+    // トリムっとく
     var matText = matTextList[i].replace(/^\s+|\s+$/g, '');
     var info = matText.match(/([A-Za-z]+)\(([\w\W]+?)\)/gi);
 
@@ -1557,6 +1557,7 @@ if (typeof exports !== 'undefined') {
 } else {
   this['MqoParser'] = MqoParser;
 }
+
 
 
 
