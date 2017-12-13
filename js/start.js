@@ -451,9 +451,11 @@ function starTurning(dom,bar,upOrDown,scrllTop) {
 	var supportsWebGL = ( function () { try { return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext( 'experimental-webgl' ); } catch( e ) { return false; } } )();
 	
 	// とりあえずポリゴンデータを読み込んでおく
+	var mqo;
 	if(supportsWebGL) {
 		MqoParser.load('asset/polygon.mqo', function(mqo){
 			mqo_data = mqo;
+			if(mqo_data) {console.log('preload 3d data is okay.');}
 		});
 	}
 	
@@ -527,6 +529,7 @@ function starTurning(dom,bar,upOrDown,scrllTop) {
           if(!mqo_data) {
             MqoParser.load('asset/polygon.mqo', function(mqo){
               mqo_data = mqo;
+              if(mqo_data) {console.log('3d data is okay.');}
               var geometry = MqoConverter.toTHREEJS_Geometry(mqo_data, {scale : 0.0027});
               var materials = MqoConverter.generateMaterials(mqo_data.materials, 'asset');
               mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
