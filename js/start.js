@@ -1470,8 +1470,8 @@ $(document).ready(function (){
 						if(!tellYourWorld_flag_dom_detect_once_flag) {
 							tellYourWorld_flag_dom_detect_once_flag = true;
 							// console.log('tellYourWorld_flag_dom shutsugen');
-							// $('#tellYourWorld').attr('src','http://www.youtube-nocookie.com/embed/wReZjp84YmY?rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1&theme=light');
-							$('#tellYourWorld').append('<iframe style="position:absolute;display: block;top:0;left:0;right:0;bottom:0;margin:auto;max-width:90%;z-index:100;" width="640" height="480" frameborder="0" src="http://www.youtube-nocookie.com/embed/wReZjp84YmY?rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1&theme=light"></iframe>');
+							// $('#tellYourWorld').attr('src','https://www.youtube-nocookie.com/embed/wReZjp84YmY?rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1&theme=light');
+							$('#tellYourWorld').append('<iframe style="position:absolute;display: block;top:0;left:0;right:0;bottom:0;margin:auto;max-width:90%;z-index:100;" width="640" height="480" frameborder="0" src="https://www.youtube-nocookie.com/embed/wReZjp84YmY?rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1&theme=light"></iframe>');
 						}
 					}
 				}
