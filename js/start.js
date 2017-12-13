@@ -469,14 +469,6 @@ function starTurning(dom,bar,upOrDown,scrllTop) {
 	function darkorb_3dcg_start() {
         var camera, scene, renderer, mesh;
 
-//        MqoParser.load('asset/polygon.mqo', function(mqo){
-//          var geometry = MqoConverter.toTHREEJS_Geometry(mqo, {scale : 0.0027});
-//          var materials = MqoConverter.generateMaterials(mqo.materials, 'asset');
-//          mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
-//          init();
-//          animate();
-//        });
-
         var init = function() {
           scene = new THREE.Scene();
 

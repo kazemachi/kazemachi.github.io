@@ -1086,7 +1086,6 @@ MqoMesh.prototype._parseVertices = function(num, text) {
 
 MqoMesh.prototype._parseFaces = function(num, text) {
   var faceTextList = text.split('\n');
-  console.log('faceTextList = '+faceTextList);
 
   var calcNormalize = function(a, b, c)
   {
@@ -1114,25 +1113,20 @@ MqoMesh.prototype._parseFaces = function(num, text) {
   for (var i = 1; i <= num; ++i) {
     // トリムっとく
     var faceText = faceTextList[i].replace(/^\s+|\s+$/g, '');
-    console.log('faceText = '+faceText);
     // 面の数
     var vertex_num = Number(faceText[0]);
 
     var info = faceText.match(/([A-Za-z]+)\(([\w\s\-\.\(\)]+?)\)/gi);
-    console.log('info = '+info);
-    console.log('len = '+len);
     var face = { vNum: vertex_num };
 
-	if(info && len) {
-	    for (var j = 0, len = info.length; j < len; ++j) {
-	      var m = info[j].match(/([A-Za-z]+)\(([\w\s\-\.\(\)]+?)\)/);
-	      var key = m[1].toLowerCase();
-	      var value = m[2].split(' ');
-	      value.forEach(function(elm, i, arr) {
-	        arr[i] = Number(elm);
-	      });
-	      face[key] = value;
-	    }
+    for (var j = 0, len = info.length; j < len; ++j) {
+      var m = info[j].match(/([A-Za-z]+)\(([\w\s\-\.\(\)]+?)\)/);
+      var key = m[1].toLowerCase();
+      var value = m[2].split(' ');
+      value.forEach(function(elm, i, arr) {
+        arr[i] = Number(elm);
+      });
+      face[key] = value;
     }
 
     // UV デフォルト値
@@ -1144,20 +1138,17 @@ MqoMesh.prototype._parseFaces = function(num, text) {
     if (!face.m) face.m = [undefined];
 
     // 法線計算
-    if(face.v) {
-    	console.log('face.v = '+face.v);
-	    if(face.v.length === 3) {
-	      face.n = calcNormalize(this.vertices[face.v[0]], this.vertices[face.v[1]], this.vertices[face.v[2]]);
-	
-	    } else if(face.v.length === 4) {
-	      var n1 = calcNormalize(this.vertices[face.v[0]], this.vertices[face.v[1]], this.vertices[face.v[2]]);
-	      var n2 = calcNormalize(this.vertices[face.v[2]], this.vertices[face.v[3]], this.vertices[face.v[0]]);
-	      face.n = [
-	        (n1[0] + n2[0]) * 0.5,
-	        (n1[1] + n2[1]) * 0.5,
-	        (n1[2] + n2[2]) * 0.5
-	      ]
-	    }
+    if(face.v.length === 3) {
+      face.n = calcNormalize(this.vertices[face.v[0]], this.vertices[face.v[1]], this.vertices[face.v[2]]);
+
+    } else if(face.v.length === 4) {
+      var n1 = calcNormalize(this.vertices[face.v[0]], this.vertices[face.v[1]], this.vertices[face.v[2]]);
+      var n2 = calcNormalize(this.vertices[face.v[2]], this.vertices[face.v[3]], this.vertices[face.v[0]]);
+      face.n = [
+        (n1[0] + n2[0]) * 0.5,
+        (n1[1] + n2[1]) * 0.5,
+        (n1[2] + n2[2]) * 0.5
+      ]
     } else {
       face.n = [0, 0, 0];
     }
