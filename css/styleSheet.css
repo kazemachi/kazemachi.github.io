@@ -1,0 +1,1716 @@
+/* kazemachi.so styleSheet.css utf-8 */
+
+	.clearfix { zoom:1; }
+	.clearfix:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	.noselect {
+		-webkit-user-select:none;
+		-moz-user-select:none;
+		-ms-user-select:none;
+		user-select:none;
+	}
+
+	::selection {
+		background:rgba(0,0,0,0.25);
+		background:rgba(255, 0, 112, 0.5);
+	}
+
+	::-moz-selection {
+		background:rgba(0,0,0,0.25);
+		background:rgba(255, 0, 112, 0.5);
+	}
+
+	* {
+		word-wrap:break-word;
+	}
+
+	img { border: none; }
+
+	html {
+		overflow-y: scroll;
+		overflow-x: hidden;
+		/* 1rem */
+		font-size:16px;
+	}
+	html,body {
+		height:100%;
+		margin: 0px;
+	}
+	body {
+		text-align:center;
+		font-family: "AxisStd-Regular","ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 'Meiryo', "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+		line-height:1.5;
+		
+		background-attachment: fixed !important;
+		
+		background-color: #6c6393;
+		background-image: linear-gradient(#333366, #a594c0);
+		/* filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#333366, endColorstr=#a594c0); */
+	}
+	#musicplayer {
+		position:absolute;
+		width:1px;
+		height:1px;
+		opacity:0;
+		top:0;
+		left:0;
+	}
+
+	#toggle_2d3d {
+		outline: 0;
+		position: absolute;
+		bottom:44%;
+		left: 2%;
+		z-index: 100;
+		
+		cursor: pointer;
+		color: #fff;
+		background: rgba(255,255,255,0);
+		border: 1px solid rgba(255, 255, 255, 0.88);
+		font-size: 2rem;
+		font-size: 32px;
+		line-height: 256%;
+		display: inline-block;
+		padding: 1% 2% 1.1% 2%;
+		margin-bottom: 0;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		-ms-touch-action: manipulation;
+		touch-action: manipulation;
+		background-image: none;
+		border-radius: 5px;
+		
+		font-family: 'Lucida Grande', 'Segoe UI Light', 'Segoe UI', Tahoma, Arial, Verdana, Meiryo, AppleGothic, Calibri, sans-serif;
+	}
+	#toggle_2d3d:enabled:active {
+		outline: 0;
+		box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+		box-shadow: inset 0 -63px 63px 0px rgba(255,255,255,0.15);
+		box-shadow: inset 0 -80px 80px 0px rgba(255,255,255,0.15);
+	}
+	#toggle_2d3d:disabled {
+		outline: 0;
+		cursor: default;
+		box-shadow: none;
+		border: 1px rgba(255,255,255,0.27) solid;
+		color: rgba(255,255,255,0);
+		text-shadow: 0px 0px 5px rgba(255,255,255,0.63);
+	}
+
+	#AKEMI_Homura_div_parent {
+		background:url('../asset/akemiHomura.png') no-repeat;
+		background-size:100%;
+		width:100%;
+		height:auto;
+		position:relative;
+		margin-left:0%;
+	}
+	#AKEMI_Homura_div_transparent {
+		position:absolute;width:100%;height:auto;top:0;left:0;display:block;
+	}
+	#AKEMI_Homura_div {
+		position:   relative;
+		overflow:   visible;
+		width:      100%;
+		height:     auto;
+		margin-top: 0%;
+		margin-left:0%;
+	}
+	#AKEMI_Homura {
+		width:100%;
+	}
+	#inu8{
+		width: 100%;
+		position: relative;
+		display:none;
+	}
+	#inu8 canvas {
+		width: 21%;
+		z-index: 9;
+		position: absolute;
+		left: 39%;
+		margin-top: 0%;
+		
+		width: 24%;
+		left: 38.1%;
+		left: 37.5%;
+		left: 37.8%;
+		margin-top: -4.2%;
+		
+		-webkit-transform: rotate(-27deg);
+		-moz-transform: rotate(-27deg);
+		-ms-transform: rotate(-27deg);
+		transform: rotate(-27deg);
+	}
+	.inu8_canvas_animation {
+		-webkit-animation: moveY_deg2 1.8s infinite alternate ease-in-out;
+		-moz-animation: moveY_deg2 1.8s infinite alternate ease-in-out;
+		-ms-animation: moveY_deg2 1.8s infinite alternate ease-in-out;
+		animation: moveY_deg2 1.8s infinite alternate ease-in-out;
+	}
+	#DarkOrb_png {
+		position: absolute;
+		cursor: pointer;
+		width: 18.7%;
+		z-index: 9;
+		left: 41.5%;
+		margin-top: 0%;
+		
+		-webkit-transform: rotate(-27deg);
+		-moz-transform: rotate(-27deg);
+		-ms-transform: rotate(-27deg);
+		transform: rotate(-27deg);
+	}
+	.DarkOrb_png_animation {
+		-webkit-animation: moveY_deg 1.8s infinite alternate ease-in-out;
+		-moz-animation: moveY_deg 1.8s infinite alternate ease-in-out;
+		-ms-animation: moveY_deg 1.8s infinite alternate ease-in-out;
+		animation: moveY_deg 1.8s infinite alternate ease-in-out;
+	}
+	#DarkOrb_particle {
+		position: absolute;
+		z-index: 29;
+		z-index: 11;
+		top: -9%;
+		left: 36.9%;
+		width: 29%;
+		height: 65%;
+		height: 68%;
+		
+		opacity:1;
+		
+		top: -11%;
+		left: 37.2%;
+		width: 28%;
+	}
+	.DarkOrb_particle_animation {
+		-webkit-animation: moveY_deg 1.8s infinite alternate ease-in-out;
+		-moz-animation: moveY_deg 1.8s infinite alternate ease-in-out;
+		-ms-animation: moveY_deg 1.8s infinite alternate ease-in-out;
+		animation: moveY_deg 1.8s infinite alternate ease-in-out;
+	}
+	#hamon_hover_action {
+		background:url("../asset/transparent.gif") repeat;
+		position: absolute;
+		overflow: hidden;
+		display: inline;
+		width: 15%;
+		height: 44%;
+		z-index: 128;
+		left: 43%;
+		top: 2%;
+		-ms-touch-action: manipulation;
+		touch-action: manipulation;
+	}
+	#hikari1 {
+		position: absolute;
+		z-index: 28;
+		z-index: 8;
+		
+		width: 25.8%;
+		left: 40.2%;
+		top: -7.2%;
+		
+		width: 39%;
+		left: 34%;
+		top: -19%;
+		
+		-webkit-transform: rotate(-27deg);
+		-moz-transform: rotate(-27deg);
+		-ms-transform: rotate(-27deg);
+		transform: rotate(-27deg);
+		
+		width: 63%;
+		left: 21%;
+		top: -63%;
+		
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+	.hikari1_animation {
+		-webkit-animation-name:hikari1,hikari1_opacity;
+		-webkit-animation-duration:1.8s,3.2s;
+		-webkit-animation-timing-function:ease-in-out,linear;
+		-webkit-animation-iteration-count:infinite;
+		-webkit-animation-direction:alternate,normal;
+		
+		-moz-animation-name:hikari1,hikari1_opacity;
+		-moz-animation-duration:1.8s,3.2s;
+		-moz-animation-timing-function:ease-in-out,linear;
+		-moz-animation-iteration-count:infinite;
+		-moz-animation-direction:alternate,normal;
+		
+		-ms-animation-name:hikari1,hikari1_opacity;
+		-ms-animation-duration:1.8s,3.2s;
+		-ms-animation-timing-function:ease-in-out,linear;
+		-ms-animation-iteration-count:infinite;
+		-ms-animation-direction:alternate,normal;
+		
+		animation-name:hikari1,hikari1_opacity;
+		animation-duration:1.8s,3.2s;
+		animation-timing-function:ease-in-out,linear;
+		animation-iteration-count:infinite;
+		animation-direction:alternate,normal;
+	}
+	.kirakira {
+		position: absolute;
+		width: 25.8%;
+		z-index: 27;
+		left: 37.2%;
+		top: -11.2%;
+		
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	#kirakira1 {
+		
+	}
+	.kirakira1_animation {
+		-webkit-animation-name:moveY2,kirakira;
+		-webkit-animation-duration:2s;
+		-webkit-animation-timing-function:linear;
+		-webkit-animation-iteration-count:infinite;
+		-webkit-animation-direction:normal;
+		-webkit-animation-delay: -1s;
+		
+		-moz-animation-name:moveY2,kirakira;
+		-moz-animation-duration:2s;
+		-moz-animation-timing-function:linear;
+		-moz-animation-iteration-count:infinite;
+		-moz-animation-direction:normal;
+		-moz-animation-delay: -1s;
+		
+		-ms-animation-name:moveY2,kirakira;
+		-ms-animation-duration:2s;
+		-ms-animation-timing-function:linear;
+		-ms-animation-iteration-count:infinite;
+		-ms-animation-direction:normal;
+		-ms-animation-delay: -1s;
+		
+		animation-name:moveY2,kirakira;
+		animation-duration:2s;
+		animation-timing-function:linear;
+		animation-iteration-count:infinite;
+		animation-direction:normal;
+		animation-delay: -1s;
+		
+		-webkit-animation-fill-mode: forwards;
+		-moz-animation-fill-mode: forwards;
+		-ms-animation-fill-mode: forwards;
+		-o-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+	}
+	#kirakira2 {
+		
+	}
+	.kirakira2_animation {
+		-webkit-animation-name:moveY2,kirakira;
+		-webkit-animation-duration:2.7s;
+		-webkit-animation-timing-function:linear;
+		-webkit-animation-iteration-count:infinite;
+		-webkit-animation-direction:normal;
+		
+		-moz-animation-name:moveY2,kirakira;
+		-moz-animation-duration:2.7s;
+		-moz-animation-timing-function:linear;
+		-moz-animation-iteration-count:infinite;
+		-moz-animation-direction:normal;
+		
+		-ms-animation-name:moveY2,kirakira;
+		-ms-animation-duration:2.7s;
+		-ms-animation-timing-function:linear;
+		-ms-animation-iteration-count:infinite;
+		-ms-animation-direction:normal;
+		
+		animation-name:moveY2,kirakira;
+		animation-duration:2.7s;
+		animation-timing-function:linear;
+		animation-iteration-count:infinite;
+		animation-direction:normal;
+		
+		-webkit-animation-fill-mode: forwards;
+		-moz-animation-fill-mode: forwards;
+		-ms-animation-fill-mode: forwards;
+		-o-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+	}
+	#kirakira3 {
+		
+	}
+	.kirakira3_animation {
+		-webkit-animation-name:moveY2,kirakira;
+		-webkit-animation-duration:2s;
+		-webkit-animation-timing-function:linear;
+		-webkit-animation-iteration-count:infinite;
+		-webkit-animation-direction:normal;
+		
+		-moz-animation-name:moveY2,kirakira;
+		-moz-animation-duration:2s;
+		-moz-animation-timing-function:linear;
+		-moz-animation-iteration-count:infinite;
+		-moz-animation-direction:normal;
+		
+		-ms-animation-name:moveY2,kirakira;
+		-ms-animation-duration:2s;
+		-ms-animation-timing-function:linear;
+		-ms-animation-iteration-count:infinite;
+		-ms-animation-direction:normal;
+		
+		animation-name:moveY2,kirakira;
+		animation-duration:2s;
+		animation-timing-function:linear;
+		animation-iteration-count:infinite;
+		animation-direction:normal;
+		
+		-webkit-animation-fill-mode: forwards;
+		-moz-animation-fill-mode: forwards;
+		-ms-animation-fill-mode: forwards;
+		-o-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+	}
+	
+	#eye_highLight{
+		position: absolute;
+		z-index:5;
+
+		width: 12.2%;
+		top: 39.1%;
+		left: 64.48%;
+	}
+	.eye_highLight_animation_css {
+		-webkit-animation-name: eye_highLight_animation;
+		-webkit-animation-duration: 0.19s;
+		-webkit-animation-delay: 0s;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-iteration-count: infinite;
+		
+		-moz-animation-name: eye_highLight_animation;
+		-moz-animation-duration: 0.19s;
+		-moz-animation-delay: 0s;
+		-moz-animation-timing-function: linear;
+		-moz-animation-iteration-count: infinite;
+		
+		-ms-animation-name: eye_highLight_animation;
+		-ms-animation-duration: 0.19s;
+		-ms-animation-delay: 0s;
+		-ms-animation-timing-function: linear;
+		-ms-animation-iteration-count: infinite;
+		
+		animation-name: eye_highLight_animation;
+		animation-duration: 0.19s;
+		animation-delay: 0s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	
+	@-webkit-keyframes eye_highLight_animation {
+		0% {top: 39.1%;} 25% {top: 39.0%;} 50% {top: 39.0%;} 75% {top: 39.0%;} 100% {top: 39.1%;}
+	}
+	@-moz-keyframes eye_highLight_animation {
+		0% {top: 39.1%;} 25% {top: 39.0%;} 50% {top: 39.0%;} 75% {top: 39.0%;} 100% {top: 39.1%;}
+	}
+	@-ms-keyframes eye_highLight_animation {
+		0% {top: 39.1%;} 25% {top: 39.0%;} 50% {top: 39.0%;} 75% {top: 39.0%;} 100% {top: 39.1%;}
+	}
+	@keyframes eye_highLight_animation {
+		0% {top: 39.1%;} 25% {top: 39.0%;} 50% {top: 39.0%;} 75% {top: 39.0%;} 100% {top: 39.1%;}
+	}
+	
+	@-webkit-keyframes moveY_deg {
+		0% {margin-top:0.8%;-webkit-transform: rotate(-26.7deg);}
+		100% {margin-top:2.7%;-webkit-transform: rotate(-28deg);}
+	}
+	@-moz-keyframes moveY_deg {
+		0% {margin-top:0.8%;-moz-transform: rotate(-26.7deg);}
+		100% {margin-top:2.7%;-moz-transform: rotate(-28deg);}
+	}
+	@-ms-keyframes moveY_deg {
+		0% {margin-top:0.8%;-ms-transform: rotate(-26.7deg);}
+		100% {margin-top:2.7%;-ms-transform: rotate(-28deg);}
+	}
+	@keyframes moveY_deg {
+		0% {margin-top:0.8%;transform: rotate(-26.7deg);}
+		100% {margin-top:2.7%;transform: rotate(-28deg);}
+	}
+	
+	@-webkit-keyframes moveY_deg2 {
+		0% {margin-top:-3.5%;-webkit-transform: rotate(-26.7deg);}
+		100% {margin-top:-2%;-webkit-transform: rotate(-28deg);}
+	}
+	@-moz-keyframes moveY_deg2 {
+		0% {margin-top:-3.5%;-moz-transform: rotate(-26.7deg);}
+		100% {margin-top:-2%;-moz-transform: rotate(-28deg);}
+	}
+	@-ms-keyframes moveY_deg2 {
+		0% {margin-top:-3.5%;-ms-transform: rotate(-26.7deg);}
+		100% {margin-top:-2%;-ms-transform: rotate(-28deg);}
+	}
+	@keyframes moveY_deg2 {
+		0% {margin-top:-3.5%;transform: rotate(-26.7deg);}
+		100% {margin-top:-2%;transform: rotate(-28deg);}
+	}
+	
+	@-webkit-keyframes moveY {
+		0% {margin-top:0.8%;}
+		100% {margin-top:2.7%;}
+	}
+	@-moz-keyframes moveY {
+		0% {margin-top:0.8%;}
+		100% {margin-top:2.7%;}
+	}
+	@-ms-keyframes moveY {
+		0% {margin-top:0.8%;}
+		100% {margin-top:2.7%;}
+	}
+	@keyframes moveY {
+		0% {margin-top:0.8%;}
+		100% {margin-top:2.7%;}
+	}
+	
+	@-webkit-keyframes moveY2 {
+		0% {margin-top:-1%;margin-left:0%;}
+		100% {margin-top:5%;margin-left:7%;}
+	}
+	@-moz-keyframes moveY2 {
+		0% {margin-top:-1%;margin-left:0%;}
+		100% {margin-top:5%;margin-left:7%;}
+	}
+	@-ms-keyframes moveY2 {
+		0% {margin-top:-1%;margin-left:0%;}
+		100% {margin-top:5%;margin-left:7%;}
+	}
+	@keyframes moveY2 {
+		0% {margin-top:-1%;margin-left:0%;}
+		100% {margin-top:5%;margin-left:7%;}
+	}
+	
+	@-webkit-keyframes hikari1 {
+		0% {margin-top:0.2%;-webkit-transform: rotate(-2deg);}
+		100% {margin-top:3%;-webkit-transform: rotate(0deg);}
+	}
+	@-moz-keyframes hikari1 {
+		0% {margin-top:0.2%;-moz-transform: rotate(-2deg);}
+		100% {margin-top:3%;-moz-transform: rotate(0deg);}
+	}
+	@-ms-keyframes hikari1 {
+		0% {margin-top:0.2%;-ms-transform: rotate(-2deg);}
+		100% {margin-top:3%;-ms-transform: rotate(0deg);}
+	}
+	@keyframes hikari1 {
+		0% {margin-top:0.2%;transform: rotate(-2deg);}
+		100% {margin-top:3%;transform: rotate(0deg);}
+	}
+	
+	@-webkit-keyframes hikari1_opacity {
+		0% {opacity:0.7;}
+		10% {opacity:0.8;}
+		20% {opacity:0.7;}
+		30% {opacity:0.7;}
+		40% {opacity:0.8;}
+		50% {opacity:0.7;}
+		60% {opacity:0.7;}
+		70% {opacity:0.8;}
+		80% {opacity:0.9;}
+		90% {opacity:0.8;}
+		100% {opacity:0.7;}
+	}
+	@-moz-keyframes hikari1_opacity {
+		0% {opacity:0.7;}
+		10% {opacity:0.8;}
+		20% {opacity:0.7;}
+		30% {opacity:0.7;}
+		40% {opacity:0.8;}
+		50% {opacity:0.7;}
+		60% {opacity:0.7;}
+		70% {opacity:0.8;}
+		80% {opacity:0.9;}
+		90% {opacity:0.8;}
+		100% {opacity:0.7;}
+	}
+	@-ms-keyframes hikari1_opacity {
+		0% {opacity:0.7;}
+		10% {opacity:0.8;}
+		20% {opacity:0.7;}
+		30% {opacity:0.7;}
+		40% {opacity:0.8;}
+		50% {opacity:0.7;}
+		60% {opacity:0.7;}
+		70% {opacity:0.8;}
+		80% {opacity:0.9;}
+		90% {opacity:0.8;}
+		100% {opacity:0.7;}
+	}
+	@keyframes hikari1_opacity {
+		0% {opacity:0.7;}
+		10% {opacity:0.8;}
+		20% {opacity:0.7;}
+		30% {opacity:0.7;}
+		40% {opacity:0.8;}
+		50% {opacity:0.7;}
+		60% {opacity:0.7;}
+		70% {opacity:0.8;}
+		80% {opacity:0.9;}
+		90% {opacity:0.8;}
+		100% {opacity:0.7;}
+	}
+	
+	@-webkit-keyframes kirakira {
+		0% {opacity:0;}
+		2% {opacity:1;}
+		25% {opacity:1;}
+		50% {opacity:0.5;}
+		75% {opacity:0;}
+		100% {opacity:0;}
+	}
+	@-moz-keyframes kirakira {
+		0% {opacity:0;}
+		2% {opacity:1;}
+		25% {opacity:1;}
+		50% {opacity:0.5;}
+		75% {opacity:0;}
+		100% {opacity:0;}
+	}
+	@-ms-keyframes kirakira {
+		0% {opacity:0;}
+		2% {opacity:1;}
+		25% {opacity:1;}
+		50% {opacity:0.5;}
+		75% {opacity:0;}
+		100% {opacity:0;}
+	}
+	@keyframes kirakira {
+		0% {opacity:0;}
+		2% {opacity:1;}
+		25% {opacity:1;}
+		50% {opacity:0.5;}
+		75% {opacity:0;}
+		100% {opacity:0;}
+	}
+
+	#wallpaper_modal_window {
+		display:none;
+		position:absolute;
+		overflow-x:hidden;
+		overflow-y:scroll;
+		overflow:hidden;
+		-webkit-overflow-scrolling: touch;
+		z-index:9997;
+		top:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+		background:#000;
+		background:rgba(0,0,0,0.63);
+	}
+	#wallpaper_modal_message_1 {
+		position:absolute;
+		z-index:9998;
+	}
+	#wallpaper_modal_message_2_madoka {
+		position:absolute;
+		z-index:9998;
+	}
+	#wallpaper_modal_message_2_homura {
+		position:absolute;
+		z-index:9998;
+	}
+	#wallpaper_modal_message_3 {
+		position:absolute;
+		z-index:9998;
+	}
+	#wallpaper_modal_message_4 {
+		position:absolute;
+		z-index:9998;
+	}
+	#wallpaper_modal_message_5 {
+		position:absolute;
+		z-index:9998;
+	}
+	#wallpaper_modal_message_6 {
+		position:absolute;
+		z-index:9998;
+	}
+	#wallpaper_modal_message_7 {
+		position:absolute;
+		z-index:9998;
+	}
+	#wallpaper_modal_window_close {
+		position:absolute;
+		z-index:9999;
+		width:17%;
+		top:1.5%;
+		right:0.27%;
+		-ms-touch-action: manipulation;
+		touch-action: manipulation;
+		cursor:pointer;
+		opacity:0.8;
+	}
+	#wallpaper_modal_window_close:hover {
+		opacity:1;
+	}
+	#wallpaper_modal_message_2_madoka:hover,#wallpaper_modal_message_2_homura:hover,#wallpaper_modal_message_3:hover,#wallpaper_modal_message_5:hover,#wallpaper_modal_message_6:hover,#wallpaper_modal_message_7:hover {
+		filter: brightness(1.27);
+		-webkit-filter: brightness(1.27);
+		-moz-filter: brightness(1.27);
+		-o-filter: brightness(1.27);
+		-ms-filter: brightness(1.27);
+	}
+	@media all and (orientation: portrait) {
+		#wallpaper_modal_message_1 {
+			width:80%;
+			top:2%;
+			left:5%;
+		}
+		#wallpaper_modal_message_2_madoka {
+			width:27%;
+			bottom:39.9%;
+			left:5%;
+		}
+		#wallpaper_modal_message_2_homura {
+			width:27%;
+			bottom:39.9%;
+			left:39%;
+		}
+		#wallpaper_modal_message_3 {
+			width:62.5%;
+			width:27%;
+			bottom:39.9%;
+			bottom:41.4%;
+			right:2.7%;
+		}
+		#wallpaper_modal_message_4 {
+			width:88%;
+			bottom:2%;
+			left:5%;
+		}
+		#wallpaper_modal_message_5 {
+			width:18%;
+			bottom:2%;
+			left:48.5%;
+		}
+		#wallpaper_modal_message_6 {
+			width:9.4%;
+			bottom:1.9%;
+			left:72%;
+		}
+		#wallpaper_modal_message_7 {
+			width:14%;
+			bottom:1.9%;
+			left:85%;
+		}
+		#AKEMI_Homura_div_parent {
+			width: 150% !important;
+			margin-left: -32% !important;
+		}
+		#logo_arrow {
+			width: 11% !important;
+			left: 44% !important;
+		}
+		#logo_arrow_click_area {
+			width:100% !important;
+			height:100% !important;
+			left:0% !important;
+		}
+		#AKEMI_Homura_div_parent_parent {
+			width:100% !important;
+			overflow:hidden !important;
+		}
+		#kazemachi_logo {
+			width:100% !important;
+		}
+		#ultimate_svgs {
+			width:100% !important;
+		}
+	}
+	@media all and (orientation: landscape) {
+		#wallpaper_modal_message_1 {
+			width:49.2%;
+			top:2%;
+			left:13.8%;
+		}
+		#wallpaper_modal_message_2_madoka {
+			width:10.2%;
+			bottom:46.4%;
+			left:13.8%;
+		}
+		#wallpaper_modal_message_2_homura {
+			width:10.2%;
+			bottom:46.4%;
+			left:28.1%;
+		}
+		#wallpaper_modal_message_3 {
+			width:23.5%;
+			bottom:46.4%;
+			left:41.5%;
+		}
+		#wallpaper_modal_message_4 {
+			width:56.8%;
+			bottom:2%;
+			left:13.8%;
+		}
+		#wallpaper_modal_message_5 {
+			width:12%;
+			bottom:2%;
+			left:42%;
+		}
+		#wallpaper_modal_message_6 {
+			width:6.5%;
+			bottom:2.3%;
+			left:57%;
+		}
+		#wallpaper_modal_message_7 {
+			width:9%;
+			bottom:2.3%;
+			left:66%;
+		}
+		#AKEMI_Homura_div_parent {
+			width: 100% !important;
+			margin-left: 0% !important;
+		}
+		#logo_arrow {
+			width: 2.7% !important;
+			left: 48.5% !important;
+		}
+		#logo_arrow_click_area {
+			width: 18% !important;
+			height: 15% !important;
+			left: 41% !important;
+		}
+		#AKEMI_Homura_div_parent_parent {
+			width:auto !important;
+			overflow:visible !important;
+		}
+		#kazemachi_logo {
+			width:88% !important;
+		}
+		#ultimate_svgs {
+			width:80% !important;
+		}
+	}
+
+
+
+
+
+	#bar1,#bar2,#bar3,#bar4,#bar5,#bar6 {
+		visibility:hidden;
+		position: absolute;
+		background: url("../asset/bar_slice.png") repeat;
+		background-size: 100%;
+		background-size: auto;
+		z-index:998;
+	}
+	#star1,#star2,#star3,#star4,#star5,#star6 {
+		visibility:hidden;
+		position: absolute;
+		width:924px;
+		height: auto;
+		z-index:999;
+	}
+	#brokenstar {
+		visibility:hidden;
+		z-index:999;
+	}
+	#bar1 {
+		width: 2%;
+		left: 5.44%;
+	}
+	#star1 {
+		top: 80%;
+		left: 2.9%;
+		width: 7%;
+	}
+	#bar2 {
+		top: 0%;
+		left: 9%;
+		width: 2.9%;
+	}
+	#star2 {
+		top: 55%;
+		left: 5.9%;
+		width: 9%;
+	}
+	#bar3 {
+		top: 0%;
+		left: 32.3%;
+		width: 4.4%;
+	}
+	#star3 {
+		top: 27%;
+		left: 27.0%;
+		width: 15%;
+	}
+	#bar4 {
+		top: 0%;
+		left: 45.5%;
+		width: 8%;
+	}
+	#star4,#brokenstar {
+		top: 44%;
+		left: 39%;
+		width: 21%;
+	}
+	#bar5 {
+		top: 0%;
+		left: 84.3%;
+		width: 3.5%;
+	}
+	#star5 {
+		top: 63%;
+		left: 80%;
+		width: 12%;
+	}
+	#bar6 {
+		top: 0%;
+		left: 92.5%;
+		width: 2%;
+	}
+	#star6 {
+		top: 80%;
+		left: 89%;
+		width: 9%;
+	}
+
+
+
+
+
+	#ultimate_div_parent {
+		width: 100%;
+		height: 100%;
+		position:relative;
+		z-index:1000;
+	}
+
+
+	#ultimate_div {
+		position:relative;
+		
+		width: 100%;
+		height: 100%;
+		
+		overflow:hidden;
+		
+		background-color:#eee;
+		
+		margin:auto;
+		-webkit-perspective: 720px; -moz-perspective: 720px; perspective: 720px; margin:auto; backface-visibility:hidden;-webkit-backface-visibility: hidden;
+	}
+
+
+	#ultimate_svgs {
+		visibility:hidden;
+		position: absolute;
+		
+		width: 80%;
+		height: auto;
+		
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		
+		margin: auto;
+		
+		-webkit-backface-visibility: hidden;
+		        backface-visibility: hidden;
+		
+		-webkit-transform: rotateX(26deg) translateZ(0px) translateY(0px);
+		   -moz-transform: rotateX(26deg) translateZ(0px) translateY(0px);
+		    -ms-transform: rotateX(26deg) translateZ(0px) translateY(0px);
+		     -o-transform: rotateX(26deg) translateZ(0px) translateY(0px);
+		        transform: rotateX(26deg) translateZ(0px) translateY(0px);
+	}
+	
+	.ultimate_svgs_animation_once {
+		-webkit-animation: ultimate_animation 8s 1 linear alternate;
+		   -moz-animation: ultimate_animation 8s 1 linear alternate;
+		    -ms-animation: ultimate_animation 8s 1 linear alternate;
+		     -o-animation: ultimate_animation 8s 1 linear alternate;
+		        animation: ultimate_animation 8s 1 linear alternate;
+		
+		-webkit-animation-timing-function: cubic-bezier(0.10, 0.5, 0.8, 1.0);
+		        animation-timing-function: cubic-bezier(0.10, 0.5, 0.8, 1.0);
+		
+		-webkit-animation-fill-mode: forwards;
+		   -moz-animation-fill-mode: forwards;
+		    -ms-animation-fill-mode: forwards;
+		     -o-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+	
+	.ultimate_svgs_after_animation {
+		-webkit-transform: rotateX(-26deg) translateZ(0px) translateY(0px) !important;
+		   -moz-transform: rotateX(-26deg) translateZ(0px) translateY(0px) !important;
+		    -ms-transform: rotateX(-26deg) translateZ(0px) translateY(0px) !important;
+		     -o-transform: rotateX(-26deg) translateZ(0px) translateY(0px) !important;
+		        transform: rotateX(-26deg) translateZ(0px) translateY(0px) !important;
+	}
+	
+	@-webkit-keyframes ultimate_animation {
+	    0%   { -webkit-transform: rotateX(0deg)  translateZ(0px) translateY(0px); }
+	    100% { -webkit-transform: rotateX(-26deg) translateZ(0px) translateY(0px); }
+	}
+	
+	@-moz-keyframes ultimate_animation {
+	    0%   { -moz-transform: rotateX(0deg)  translateZ(0px) translateY(0px); }
+	    100% { -moz-transform: rotateX(-26deg) translateZ(0px) translateY(0px); }
+	}
+	
+	@-ms-keyframes ultimate_animation {
+	    0%   { -ms-transform: rotateX(0deg)  translateZ(0px) translateY(0px); }
+	    100% { -ms-transform: rotateX(-26deg) translateZ(0px) translateY(0px); }
+	}
+	
+	@-o-keyframes ultimate_animation {
+	    0%   { -o-transform: rotateX(0deg)  translateZ(0px) translateY(0px); }
+	    100% { -o-transform: rotateX(-26deg) translateZ(0px) translateY(0px); }
+	}
+	
+	@keyframes ultimate_animation {
+	    0%   { transform: rotateX(0deg)  translateZ(0px) translateY(0px); }
+	    100% { transform: rotateX(-26deg) translateZ(0px) translateY(0px); }
+	}
+
+
+	#kazemachi_logo {
+		position:absolute;width:88%;height:auto;top:0;right:0;bottom:0;left:0;margin:auto;
+		-webkit-backface-visibility: hidden;
+		        backface-visibility: hidden;
+	}
+	.kazemachi_logo_animation_once {
+		-webkit-animation: opacity_fadein_animation 2.7s 1 linear alternate;
+		   -moz-animation: opacity_fadein_animation 2.7s 1 linear alternate;
+		    -ms-animation: opacity_fadein_animation 2.7s 1 linear alternate;
+		     -o-animation: opacity_fadein_animation 2.7s 1 linear alternate;
+		        animation: opacity_fadein_animation 2.7s 1 linear alternate;
+		
+		-webkit-animation-fill-mode: forwards;
+		   -moz-animation-fill-mode: forwards;
+		    -ms-animation-fill-mode: forwards;
+		     -o-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+	
+	#kazemachi_logo_flash_bg_once {
+		position:absolute;
+		width:100%;
+		height:100%;
+		background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.27));
+		background: rgba(255,255,255,0.9);
+		
+		opacity:1;
+		display:none;
+		
+		-webkit-backface-visibility: hidden;
+		        backface-visibility: hidden;
+	}
+	.kazemachi_logo_flash_bg_once_animation {
+		-webkit-animation: opacity_fadeout_animation 8s 1 ease-out alternate;
+		   -moz-animation: opacity_fadeout_animation 8s 1 ease-out alternate;
+		    -ms-animation: opacity_fadeout_animation 8s 1 ease-out alternate;
+		     -o-animation: opacity_fadeout_animation 8s 1 ease-out alternate;
+		        animation: opacity_fadeout_animation 8s 1 ease-out alternate;
+		
+		-webkit-animation-fill-mode: forwards;
+		   -moz-animation-fill-mode: forwards;
+		    -ms-animation-fill-mode: forwards;
+		     -o-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+	
+	#logo_arrow_parent {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	#logo_arrow {
+		cursor:pointer;
+		
+		position: absolute;
+		width: 2.7%;
+		height: auto;
+		left: 48.5%;
+		bottom: 5%;
+		-webkit-backface-visibility: hidden;
+		        backface-visibility: hidden;
+		opacity:0;
+	}
+	.logo_arrow_animation {
+		-webkit-animation: logo_arrow_animation 3s infinite ease-out normal;
+		   -moz-animation: logo_arrow_animation 3s infinite ease-out normal;
+		    -ms-animation: logo_arrow_animation 3s infinite ease-out normal;
+		     -o-animation: logo_arrow_animation 3s infinite ease-out normal;
+		        animation: logo_arrow_animation 3s infinite ease-out normal;
+		
+		-webkit-animation-delay: 0.8s;
+		-moz-animation-delay: 0.8s;
+		-ms-animation-delay: 0.8s;
+		-o-animation-delay: 0.8s;
+		animation-delay: 0.8s;
+		
+		-webkit-animation-fill-mode: forwards;
+		   -moz-animation-fill-mode: forwards;
+		    -ms-animation-fill-mode: forwards;
+		     -o-animation-fill-mode: forwards;
+		        animation-fill-mode: forwards;
+	}
+	#logo_arrow_click_area {
+		cursor:pointer;
+		
+		position:absolute;
+		left:47%;
+		left:41%;
+		bottom:0%;
+		
+		width:5.5%;
+		width:18%;
+		height:15%;
+		
+		background-color:rgba(95,175,179,0.11);
+		background-color:transparent;
+	}
+	
+	@-webkit-keyframes opacity_fadein_animation {
+	    0%   { opacity:0; }
+	    100% { opacity:1; }
+	}
+	
+	@-moz-keyframes opacity_fadein_animation {
+	    0%   { opacity:0; }
+	    100% { opacity:1; }
+	}
+	
+	@-ms-keyframes opacity_fadein_animation {
+	    0%   { opacity:0; }
+	    100% { opacity:1; }
+	}
+	
+	@-o-keyframes opacity_fadein_animation {
+	    0%   { opacity:0; }
+	    100% { opacity:1; }
+	}
+	
+	@keyframes opacity_fadein_animation {
+	    0%   { opacity:0; }
+	    100% { opacity:1; }
+	}
+	
+	@-webkit-keyframes opacity_fadeout_animation {
+	    0%   { opacity:1; }
+	    100% { opacity:0; }
+	}
+	
+	@-moz-keyframes opacity_fadeout_animation {
+	    0%   { opacity:1; }
+	    100% { opacity:0; }
+	}
+	
+	@-ms-keyframes opacity_fadeout_animation {
+	    0%   { opacity:1; }
+	    100% { opacity:0; }
+	}
+	
+	@-o-keyframes opacity_fadeout_animation {
+	    0%   { opacity:1; }
+	    100% { opacity:0; }
+	}
+	
+	@keyframes opacity_fadeout_animation {
+	    0%   { opacity:1; }
+	    100% { opacity:0; }
+	}
+
+
+	@-webkit-keyframes logo_arrow_animation {
+	    0%   { opacity:0; bottom: 11%; }
+	    20%  { opacity:1; bottom: 5%; }
+	    95%  { opacity:1; bottom: 5%; }
+	    100% { opacity:0; bottom: 1%; }
+	}
+	@-moz-keyframes logo_arrow_animation {
+	    0%   { opacity:0; bottom: 11%; }
+	    20%  { opacity:1; bottom: 5%; }
+	    95%  { opacity:1; bottom: 5%; }
+	    100% { opacity:0; bottom: 1%; }
+	}
+	@-ms-keyframes logo_arrow_animation {
+	    0%   { opacity:0; bottom: 11%; }
+	    20%  { opacity:1; bottom: 5%; }
+	    95%  { opacity:1; bottom: 5%; }
+	    100% { opacity:0; bottom: 1%; }
+	}
+	@-o-keyframes logo_arrow_animation {
+	    0%   { opacity:0; bottom: 11%; }
+	    20%  { opacity:1; bottom: 5%; }
+	    95%  { opacity:1; bottom: 5%; }
+	    100% { opacity:0; bottom: 1%; }
+	}
+	@keyframes logo_arrow_animation {
+	    0%   { opacity:0; bottom: 11%; }
+	    20%  { opacity:1; bottom: 5%; }
+	    95%  { opacity:1; bottom: 5%; }
+	    100% { opacity:0; bottom: 1%; }
+	}
+
+
+	#portrait_hiki_wrap {
+		width:100%;
+		height:auto;
+		position:relative;
+		margin:auto;
+		
+		z-index:1;
+		
+		background-image: url("../asset/portrait.png");
+		background-repeat: repeat-x;
+		background-size: cover;
+	}
+	#portrait_transparent {
+		width:100%;height:auto;display:block;
+	}
+	.portrait_hiki_animation_class {
+		-webkit-animation: portrait_hiki_animation 27s infinite linear;
+		-moz-animation: portrait_hiki_animation 27s infinite linear;
+		-ms-animation: portrait_hiki_animation 27s infinite linear;
+		-o-animation: portrait_hiki_animation 27s infinite linear;
+		animation: portrait_hiki_animation 27s infinite linear;
+		
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+	
+	@-webkit-keyframes portrait_hiki_animation {
+		0%   { background-position:0% 0;   }
+		100% { background-position:100% 0; }
+	}
+	@-moz-keyframes portrait_hiki_animation {
+		0%   { background-position:0% 0;   }
+		100% { background-position:100% 0; }
+	}
+	@-ms-keyframes portrait_hiki_animation {
+		0%   { background-position:0% 0;   }
+		100% { background-position:100% 0; }
+	}
+	@-o-keyframes portrait_hiki_animation {
+		0%   { background-position:0% 0;   }
+		100% { background-position:100% 0; }
+	}
+	@keyframes portrait_hiki_animation {
+		0%   { background-position:0% 0;   }
+		100% { background-position:100% 0; }
+	}
+
+
+#madoka_bg {
+	margin:auto;
+	width:100%;
+	position:relative;
+	text-align:center;
+	
+	overflow:hidden;
+	
+	background-color: #080917;
+	background-color: #232225;
+	background-color: #fbfbfb;
+	
+	background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.27)), url('../asset/madoka_bg.png');
+	background-size: 100%;
+	background-repeat: repeat-y;
+	background-position: 50% 50%;
+	background-attachment: fixed;
+}
+
+#madoka {
+	position:relative;
+	width:39%;
+	width:50%;
+	height:auto;
+	margin:15em 0;
+	margin-top:63rem;
+}
+
+
+#bg_hiki_charlotte_wrap {
+	margin:auto;
+	width:100%;
+	min-height:100%;
+	position:relative;
+	text-align:center;
+	
+	overflow:hidden;
+	
+	background-color: #080917;
+	background-image: linear-gradient(#080917, #171124);
+}
+
+#bg_hiki_charlotte_bg {
+	width:100%;
+	height:100%;
+	position:absolute;
+	
+	overflow:hidden;
+	
+	background-color: #232225;
+	background-image: linear-gradient(#A08465, #171124);
+	
+	opacity:1;
+	
+	z-index:2;
+	
+	-webkit-backface-visibility: hidden;
+}
+
+.bg_hiki_charlotte_bg_animation {
+	-webkit-animation: bg_hiki_animation_charlotte_bg 4s 1 ease alternate;
+	-moz-animation: bg_hiki_animation_charlotte_bg 4s 1 ease alternate;
+	-ms-animation: bg_hiki_animation_charlotte_bg 4s 1 ease alternate;
+	-o-animation: bg_hiki_animation_charlotte_bgt 4s 1 ease alternate;
+	animation: bg_hiki_animation_charlotte_bg 4s 1 ease alternate;
+	
+	-webkit-animation-delay: 5s;
+	-moz-animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	-o-animation-delay: 5s;
+	animation-delay: 5s;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+#bg_hiki_charlotte_capsule_1 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;
+	
+	display:block;
+	
+	-webkit-transform:translate(0%,-100%);
+	-moz-transform:translate(0%,-100%);
+	-ms-transform:translate(0%,-100%);
+	-o-transform:translate(0%,-100%);
+	transform:translate(0%,-100%);
+	
+	-webkit-animation: bg_hiki_animation_charlotte_capsule 14s 1 linear alternate;
+	-moz-animation: bg_hiki_animation_charlotte_capsule 14s 1 linear alternate;
+	-ms-animation: bg_hiki_animation_charlotte_capsule 14s 1 linear alternate;
+	-o-animation: bg_hiki_animation_charlotte_capsule 14s 1 linear alternate;
+	animation: bg_hiki_animation_charlotte_capsule 14s 1 linear alternate;
+	
+	-webkit-animation-delay: 0s;
+	-moz-animation-delay: 0s;
+	-ms-animation-delay: 0s;
+	-o-animation-delay: 0s;
+	animation-delay: 0s;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-backface-visibility: hidden;
+	z-index:5;
+}
+#bg_hiki_charlotte_capsule_2 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;
+	
+	display:block;
+	
+	-webkit-transform:translate(0%,-100%);
+	-moz-transform:translate(0%,-100%);
+	-ms-transform:translate(0%,-100%);
+	-o-transform:translate(0%,-100%);
+	transform:translate(0%,-100%);
+	
+	-webkit-animation: bg_hiki_animation_charlotte_capsule 12s 1 linear alternate;
+	-moz-animation: bg_hiki_animation_charlotte_capsule 12s 1 linear alternate;
+	-ms-animation: bg_hiki_animation_charlotte_capsule 12s 1 linear alternate;
+	-o-animation: bg_hiki_animation_charlotte_capsule 12s 1 linear alternate;
+	animation: bg_hiki_animation_charlotte_capsule 12s 1 linear alternate;
+	
+	-webkit-animation-delay: 0s;
+	-moz-animation-delay: 0s;
+	-ms-animation-delay: 0s;
+	-o-animation-delay: 0s;
+	animation-delay: 0s;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-backface-visibility: hidden;
+	z-index:4;
+}
+#bg_hiki_charlotte_light_1 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;
+	
+	display:block;
+	
+	-webkit-transform:translate(0%,100%);
+	-moz-transform:translate(0%,100%);
+	-ms-transform:translate(0%,100%);
+	-o-transform:translate(0%,100%);
+	transform:translate(0%,100%);
+	
+	-webkit-animation: bg_hiki_animation_charlotte_light 14s 1 linear alternate;
+	-moz-animation: bg_hiki_animation_charlotte_light 14s 1 linear alternate;
+	-ms-animation: bg_hiki_animation_charlotte_light 14s 1 linear alternate;
+	-o-animation: bg_hiki_animation_charlotte_light 14s 1 linear alternate;
+	animation: bg_hiki_animation_charlotte_light 14s 1 linear alternate;
+	
+	-webkit-animation-delay: 5s;
+	-moz-animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	-o-animation-delay: 5s;
+	animation-delay: 5s;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-backface-visibility: hidden;
+	z-index:3;
+}
+#bg_hiki_charlotte_light_2 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;
+	
+	display:block;
+	
+	-webkit-transform:translate(0%,100%);
+	-moz-transform:translate(0%,100%);
+	-ms-transform:translate(0%,100%);
+	-o-transform:translate(0%,100%);
+	transform:translate(0%,100%);
+	
+	-webkit-animation: bg_hiki_animation_charlotte_light 19s 1 linear alternate;
+	-moz-animation: bg_hiki_animation_charlotte_light 19s 1 linear alternate;
+	-ms-animation: bg_hiki_animation_charlotte_light 19s 1 linear alternate;
+	-o-animation: bg_hiki_animation_charlotte_light 19s 1 linear alternate;
+	animation: bg_hiki_animation_charlotte_light 19s 1 linear alternate;
+	
+	-webkit-animation-delay: 5s;
+	-moz-animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	-o-animation-delay: 5s;
+	animation-delay: 5s;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	-webkit-backface-visibility: hidden;
+	z-index:2;
+}
+
+@-webkit-keyframes bg_hiki_animation_charlotte_bg {
+	0%   { opacity:1; }
+	100% { opacity:0; }
+}
+@-moz-keyframes bg_hiki_animation_charlotte_bg {
+	0%   { opacity:1; }
+	100% { opacity:0; }
+}
+@-ms-keyframes bg_hiki_animation_charlotte_bg {
+	0%   { opacity:1; }
+	100% { opacity:0; }
+}
+@-o-keyframes bg_hiki_animation_charlotte_bg {
+	0%   { opacity:1; }
+	100% { opacity:0; }
+}
+@keyframes bg_hiki_animation_charlotte_bg {
+	0%   { opacity:1; }
+	100% { opacity:0; }
+}
+
+@-webkit-keyframes bg_hiki_animation_charlotte_capsule {
+	0%   { -webkit-transform:translate(0%,-100%);    }
+	100% { -webkit-transform:translate(0%,100%);   }
+}
+@-moz-keyframes bg_hiki_animation_charlotte_capsule {
+	0%   { -moz-transform:translate(0%,-100%);    }
+	100% { -moz-transform:translate(0%,100%);   }
+}
+@-ms-keyframes bg_hiki_animation_charlotte_capsule {
+	0%   { -ms-transform:translate(0%,-100%);    }
+	100% { -ms-transform:translate(0%,100%);   }
+}
+@-o-keyframes bg_hiki_animation_charlotte_capsule {
+	0%   { -o-transform:translate(0%,-100%);    }
+	100% { -o-transform:translate(0%,100%);   }
+}
+@keyframes bg_hiki_animation_charlotte_capsule {
+	0%   { transform:translate(0%,-100%);    }
+	100% { transform:translate(0%,100%);   }
+}
+
+@-webkit-keyframes bg_hiki_animation_charlotte_light {
+	0%   { -webkit-transform:translate(0%,100%);    }
+	100% { -webkit-transform:translate(0%,-100%);   }
+}
+@-moz-keyframes bg_hiki_animation_charlotte_light {
+	0%   { -moz-transform:translate(0%,100%);    }
+	100% { -moz-transform:translate(0%,-100%);   }
+}
+@-ms-keyframes bg_hiki_animation_charlotte_light {
+	0%   { -ms-transform:translate(0%,100%);    }
+	100% { -ms-transform:translate(0%,-100%);   }
+}
+@-o-keyframes bg_hiki_animation_charlotte_light {
+	0%   { -o-transform:translate(0%,100%);    }
+	100% { -o-transform:translate(0%,-100%);   }
+}
+@keyframes bg_hiki_animation_charlotte_light {
+	0%   { transform:translate(0%,100%);    }
+	100% { transform:translate(0%,-100%);   }
+}
+
+
+
+
+
+#bg_hiki_wrap {
+	width:80%;
+	width:100%;
+	margin:auto;
+	min-height:100%;
+	position:relative;
+	text-align:center;
+	
+	overflow:hidden;
+}
+
+#sukinaAnime_logo {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;
+	margin:auto;
+	
+	display:block;
+	
+	-webkit-backface-visibility: hidden;
+}
+
+.sukinaAnime_logo_animation {
+	-webkit-animation: madomagilogo_animation 9s 1 ease alternate;
+	-moz-animation: madomagilogo_animation 9s 1 ease alternate;
+	-ms-animation: madomagilogo_animation 9s 1 ease alternate;
+	-o-animation: madomagilogo_animation 9s 1 ease alternate;
+	animation: madomagilogo_animation 9s 1 ease alternate;
+	
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+#bg_hiki_1 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;
+	
+	display:block;
+	
+	-webkit-transform:translate(0%,-66.66666%);
+	-moz-transform:translate(0%,-66.66666%);
+	-ms-transform:translate(0%,-66.66666%);
+	-o-transform:translate(0%,-66.66666%);
+	transform:translate(0%,-66.66666%);
+	
+	-webkit-animation: bg_hiki_animation 32s infinite linear;
+	-moz-animation: bg_hiki_animation 32s infinite linear;
+	-ms-animation: bg_hiki_animation 32s infinite linear;
+	-o-animation: bg_hiki_animation 32s infinite linear;
+	animation: bg_hiki_animation 32s infinite linear;
+	
+	-webkit-backface-visibility: hidden;
+	z-index:5;
+}
+#bg_hiki_2 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;
+	
+	display:block;
+	
+	-webkit-transform:translate(0%,-66.66666%);
+	-moz-transform:translate(0%,-66.66666%);
+	-ms-transform:translate(0%,-66.66666%);
+	-o-transform:translate(0%,-66.66666%);
+	transform:translate(0%,-66.66666%);
+	
+	-webkit-animation: bg_hiki_animation 39s infinite linear;
+	-moz-animation: bg_hiki_animation 39s infinite linear;
+	-ms-animation: bg_hiki_animation 39s infinite linear;
+	-o-animation: bg_hiki_animation 39s infinite linear;
+	animation: bg_hiki_animation 39s infinite linear;
+
+	-webkit-backface-visibility: hidden;
+	z-index:4;
+}
+#bg_hiki_3 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;
+	
+	display:block;
+	
+	-webkit-transform:translate(0%,-66.66666%);
+	-moz-transform:translate(0%,-66.66666%);
+	-ms-transform:translate(0%,-66.66666%);
+	-o-transform:translate(0%,-66.66666%);
+	transform:translate(0%,-66.66666%);
+	
+	-webkit-animation: bg_hiki_animation 44s infinite linear;
+	-moz-animation: bg_hiki_animation 44s infinite linear;
+	-ms-animation: bg_hiki_animation 44s infinite linear;
+	-o-animation: bg_hiki_animation 44s infinite linear;
+	animation: bg_hiki_animation 44s infinite linear;
+
+	-webkit-backface-visibility: hidden;
+	z-index:3;
+}
+#bg_hiki_4 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;
+	
+	display:block;
+	
+	-webkit-transform:translate(0%,-66.66666%);
+	-moz-transform:translate(0%,-66.66666%);
+	-ms-transform:translate(0%,-66.66666%);
+	-o-transform:translate(0%,-66.66666%);
+	transform:translate(0%,-66.66666%);
+	
+	-webkit-animation: bg_hiki_animation 50s infinite linear;
+	-moz-animation: bg_hiki_animation 50s infinite linear;
+	-ms-animation: bg_hiki_animation 50s infinite linear;
+	-o-animation: bg_hiki_animation 50s infinite linear;
+	animation: bg_hiki_animation 50s infinite linear;
+
+	-webkit-backface-visibility: hidden;
+	z-index:2;
+}
+
+@-webkit-keyframes madomagilogo_animation {
+	0%   { -webkit-transform:translate(0%,0%) scale(1); }
+	100% { -webkit-transform:translate(0%,-1.75%) scale(0.785); }
+}
+@-moz-keyframes madomagilogo_animation {
+	0%   { -moz-transform:translate(0%,0%) scale(1); }
+	100% { -moz-transform:translate(0%,-1.75%) scale(0.785); }
+}
+@-ms-keyframes madomagilogo_animation {
+	0%   { -ms-transform:translate(0%,0%) scale(1); }
+	100% { -ms-transform:translate(0%,-1.75%) scale(0.785); }
+}
+@-o-keyframes madomagilogo_animation {
+	0%   { -o-transform:translate(0%,0%) scale(1); }
+	100% { -o-transform:translate(0%,-1.75%) scale(0.785); }
+}
+@keyframes madomagilogo_animation {
+	0%   { transform:translate(0%,0%) scale(1); }
+	100% { transform:translate(0%,-1.75%) scale(0.785); }
+}
+
+@-webkit-keyframes bg_hiki_animation {
+	0%   { -webkit-transform:translate(0%,-66.66666%);    }
+	100% { -webkit-transform:translate(0%,0%); }
+}
+@-moz-keyframes bg_hiki_animation {
+	0%   { -moz-transform:translate(0%,-66.66666%);    }
+	100% { -moz-transform:translate(0%,0%); }
+}
+@-ms-keyframes bg_hiki_animation {
+	0%   { -ms-transform:translate(0%,-66.66666%);    }
+	100% { -ms-transform:translate(0%,0%); }
+}
+@-o-keyframes bg_hiki_animation {
+	0%   { -o-transform:translate(0%,-66.66666%);    }
+	100% { -o-transform:translate(0%,0%); }
+}
+@keyframes bg_hiki_animation {
+	0%   { transform:translate(0%,-66.66666%);    }
+	100% { transform:translate(0%,0%); }
+}
+
+
+#hamarikyuu_wrap {
+	margin:auto;
+	width:100%;
+	position:relative;
+	text-align:center;
+	
+	overflow:hidden;
+	
+	background-color: #080917;
+	background-color: #232225;
+	
+}
+
+#hamarikyuu_bg {
+	position:relative;
+	
+	width:100%;
+	height:auto;
+	
+	background-image: url('../asset/shinbashi.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+	background-attachment: fixed;
+}
+
+#hamarikyuu {
+	position:relative;
+	width:100%;
+	height:auto;
+	display:block;
+}

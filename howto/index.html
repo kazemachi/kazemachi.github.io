@@ -1,0 +1,294 @@
+<!doctype html>
+<!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Don't forget.                                                                
+     Always, somewhere,                                                           
+     someone is fighting for you.                                                 
+     --As long as you remember her,                                               
+     you are not alone.                                                           
+                                                                                  
+                                    ▄≡▓▓▓▓▓\╖_                                   
+                                  ▄▓▓▓▓▓▓▓▓▓▓▓\.                                  
+                                 ≡▓▓▓▓▓5▌██▓▓▓▓▓.                                
+                                 ▓▓▓██▓▓▌▓███▓▓▓]                                 
+                                 ▓▓▓▓██▓▌▓▓█E▓▓▓'                                 
+                               ...Å▓▓▓▓█▌▓▓▓▓▓▓▀..                                
+                          .....▄▄▄▄▄██▓▓█████▓▄▄▄......                           
+                       .▄╖████████████¥▓▄▄▄███▌▄███████╖▄▄.                       
+                     ▄╓██████████████▌▀▀███████████████████▄.                     
+                 ▄\███████████████████████████████████████████▄                   
+               ╓████████████████████████████████████████████████▌                 
+             _████████████████████████████████████████████████████,               
+             ██████████████████████████████████████████████████████,              
+            ████████████████████████████████████████████████████████              
+           ▐███████████████████████▀████████████████████████████████▌             
+           ███████████▌▓█████▓▓▓█████████▓██▓█▓▓▓▓▓▓█████████████████             
+           ███████████ÉÉ███▓▓\É▄.~▀ZÉ▀▀▓▓Z▀▀▀▀=~▄~▀▓▓▓███▐███████████░            
+           ███████████▓▓█▌▓É~~▄≥.~≥&LL   .   .~≥. . ▀É▓██▓███████████L            
+           `▀5█████████████▄~≤ÄÉ.  ~~     .        ._╖█████████████▀▀`            
+            .≥≥≥éZ5█████████]τ~~`            ▄▄▄.. φ██████████5E▄≥≤:.           
+            .:≥≥≥èÉÉ@▓██████É              ▄é≤~~   ╞███████▓EÉÉÉ≤≥≥..             
+             ~≥≤≥≥ÖÉÉÖ▓▓▓███L              ~~      ╘▓█████EÉÉÉÉ≤≥≤~..             
+             .~≤≤≥≥éÉÉè▓▓▓▓▓£                      ▐▓████▌èÉÉÉ≤≥≥~..              
+              ~~≤≤≥≥≤éé▐ÉÉ▓█▓\.                   ▄▓█████Öéé≤≤≥≤~..               
+               .~≤≤≤≥≥≥≥▓ÉÉ▓▓▓▓▓╖▄            _▄≡█▓██████é≤≤≤≤≥~..               
+                ~~~≤≤≥≥≥≤@▓▄█▓▓▓▓▓▓▓\╖▄▄▄▄▄╖▓▓▓▓▓██████@L≤≤≥≤≤~..                 
+                  ~~~≥≤≥≥▄▓███¥█▓▓▓▓▓▓▓▓▓▓▓▓▓█████████▌▄≤≥≥≥~~.                   
+                   ~~~~≤≤█████▓≤~~▀▀▀▀@▓▓▓▓▓▓██████████▌≤≥~~`                     
+                     ~~~~███████▓╖▄▄▄▄▄▄▄▓▓████████████▌~~`                       
+                        ~Σ█████████████████▓▓██████████"`                        
+                          ~Å█¥███████████████████████F                            
+                             ▀⌐▄▀▀Æ¥██████████████Æ▀                              
+                                ~▀=--,J╚¥¥¥¥@Æ▀▀^                                 
+
+
+
+
+
+
+
+
+-->
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8" />
+
+<title>
+図解 : kazemachi.so の裏側
+</title>
+
+<link rel="canonical" href="http://kazemachi.so/howto/" />
+
+<meta name="viewport" content="width=device-width, initial-scale=0.5" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+
+<style>
+	.clearfix { zoom:1; }
+	.clearfix:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	.noselect {
+		-webkit-user-select:none;
+		-moz-user-select:none;
+		-ms-user-select:none;
+		user-select:none;
+	}
+
+	::selection {
+		background:rgba(0,0,0,0.25);
+		background:rgba(255, 0, 112, 0.5);
+	}
+
+	::-moz-selection {
+		background:rgba(0,0,0,0.25);
+		background:rgba(255, 0, 112, 0.5);
+	}
+
+	* {
+		word-wrap:break-word;
+	}
+
+
+	img { border: none; }
+
+	html {
+		overflow-y: scroll;
+		overflow-x: hidden;
+		/* 1rem */
+		font-size:16px;
+	}
+	html,body {
+		width: 100%;
+		height:100%;
+		margin: 0px;
+	}
+	body {
+		color:#eee;
+		
+		text-align:center;
+		font-family: "AxisStd-Regular","ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 'Meiryo', "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+		line-height:1.5;
+		
+		background-attachment: fixed !important;
+		
+		background-color: #6c6393;
+		background-image: linear-gradient(#333366, #a594c0);
+		/* filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#333366, endColorstr=#a594c0); */
+	}
+</style>
+
+</head>
+
+<body>
+
+<h1 style="font-size:5rem;margin:5rem 0;">図解 : kazemachi.so の裏側</h1>
+2015年3月11日（水）、2015年3月14日（土）
+<div style="font-size:2rem;padding:2rem 0;">
+	<a href="http://kazemachi.so/" style="color:inherit;" target="_blank">kazemachi.so</a> を2015年3月11日にオープンいたしました。<br />
+	備忘録と少しのTipsを兼ねて、手記を公開いたします。
+</div>
+
+<div style="font-size:1.5rem;padding:7rem 0 2rem 0;">
+	<h2>アニメーションで出現する魔方陣</h2>
+	前提としてそもそも、まどマギが好きすぎて死ぬ勢いなので、<br />
+	いろいろ作ってみた、というのがあります。<br />
+	<br />
+	まどマギの魔方陣っぽいやつは、今回、最初に作ったギミックです。<br />
+	本編を眺めながらIllustratorでパスを描き、<br />
+	完成した魔方陣をSVGで出力。<br />
+	それをvivus.jsというライブラリで描画しつつ、CSS3で3Dアニメーションをつけています。<br />
+	<br />
+	当初、SVG filterで派手な光をつけていたのですが、<br />
+	あまりにも処理が重たくなるので断念し、現在のシンプルな形になっています。<br />
+	<br />
+	<img src="./img0.png" style="max-width:100%;" alt="魔方陣" /><br />↑発光する魔方陣（開発中画面より）<br /><br />
+	<br />
+	もっとSVGを多用したかったのですが、<br />
+	ブラウザごとの挙動の違いもあり、かなり苦戦しそうだったので、<br />
+	今回、SVGは魔方陣だけです。<br />
+	<br />
+	<img src="./img3.png" style="max-width:100%;" alt="魔方陣" /><br />↑開発中、こんな感じのデザインだったことも<br /><br />
+</div>
+
+<div style="font-size:1.5rem;padding:7rem 0 2rem 0;">
+	<h2>3DCGで作成されたダークオーブもどき</h2>
+	サイトのラフには、<br />
+	「3DCGでダークオーブを回転させる」<br />
+	などと無謀なことが書かれていました。<br />
+	筆者は小学生以来、3DCGをやったことがありません。<br />
+	<br />
+	Google Sketchup（今は別の会社のソフトになっているようです）<br />
+	を使う方法等、いろいろ考えたのですが、<br />
+	最終的にはPhotoshopの3DCG機能を使って無理やりモデリングし、<br />
+	それをMetasequoiaに持っていって完成させています。<br />
+	<br />
+	Metasequoiaのポリゴンを削る機能は素晴らしく、<br />
+	驚くべきことに<a href="./polygon.mqo" style="color:inherit;" target="_blank">出力版のダークオーブのポリゴンデータ</a>は297KBしかありません。<br />
+	サイトでくるくる回っているあれを見ても、そんな軽いデータには見えないと思います。<br />
+	素晴らしすぎるMetasequoia。<br />
+	<br />
+	結局、小学生同然の筆者のモデリングスキルでは<br />
+	「もどき」しか作れませんでしたが‥‥。<br />
+	<br />
+	<img src="./img1_2.png" style="max-width:100%;" alt="3DCG" /><br />
+	<img src="./img1.png" style="max-width:100%;" alt="3DCG" /><br />↑左の怪しいのがPhotoshopでの画面<br /><br />
+	<img src="./img2.png" style="max-width:100%;" alt="3DCG" /><br />↑Metasequoiaのレンダリング画像を<br />Photoshopでレタッチ（落書き）したのが右<br /><br />
+	<br />
+	サイトではWebGLで動かすわけですから、<br />
+	obj形式にしなければならない、しかしうまくエクスポートできない‥‥<br />
+	そんな中、Metasequoiaのmqo形式のデータを<br />
+	そのままWebGLのThree.jsで扱えるライブラリに出会いました。<br />
+	これがばっちり！<br />
+	ポリゴンもマテリアルもばっちりでした。<br />
+	あのライブラリがなければかなりの苦境だったことでしょう。<br />
+	<br />
+	んで、適当にやってたら、まぁできました。（雑<br />
+	<br />
+	実際、どういうライブラリを使っているかはこちらをご覧ください。<br />
+	<br />
+	<br />
+	<a href="./engine.min.js" style="color:inherit;" target="_blank">使用させていただいた多数のライブラリ engine.min.js</a><br />
+	<br />
+	<br />
+	<img src="./img5.png" style="max-width:100%;" alt="3DCG IE11,IE10" /><br />↑左がIE11、右がIE10の画面<br /><br />
+	WebGLが動くかどうか判定して、<br />
+	動く環境なら3Dを描画、動かない環境なら2Dを描画するようにしています。<br />
+	ブラウザがWebGLをサポートしていてもメモリ不足で描画できない環境もあるようで、<br />
+	今回そうした環境でも動くように書くことができています。<br />
+	<br />
+	<br />
+	<img src="./img4.png" style="max-width:100%;" alt="3DCG" /><br />↑うわぁぁぁぁぁ<br /><br />
+</div>
+
+<div style="font-size:1.5rem;padding:7rem 0 2rem 0;">
+	<h2>ページの読み込み速度／実行速度の高速化</h2>
+	Webページを高速化するための様々な手法が存在します。<br />
+	複数のJavaScript、CSSを1つのファイルに統合する、<br />
+	画像をCSS Spriteとして1つのファイルに統合する、<br />
+	CSSの@importは使わない、<br />
+	画像をData URI Schemeにする‥‥等です。<br />
+	<br />
+	これでHTTP Requestの数が減らせるわけですから、<br />
+	読み込み速度が高速化します。<br />
+	<br />
+	アニメーションについてはJavaScriptよりも<br />
+	CSS3が圧倒的にパフォーマンスが良いです。<br />
+	JavaScriptによるDOM操作は<br />
+	極力使いたくないものだと考えてください。<br />
+	環境次第ですがCSS3だとGPU支援が効くという利点もあります。<br />
+	<br />
+	今回、古いブラウザではアニメーションが動かなくてもいい、<br />
+	と割り切って考え、ほぼCSS3でアニメーションを実現させています。<br />
+	発火処理はJavaScriptで書けばよし、settimeoutで遅延させるもよし。<br />
+	アニメーション用のスタイルシートを外せば一瞬で停止するのも魅力的です。<br />
+	<br />
+	（ま、唯一、スクロールで回転する星だけは、JavaScriptでやってますが‥‥。）<br />
+	<br />
+	あと、JavaScriptの高速化手法として<br />
+	セレクタはコストの高いclassではなくIDを用いる‥‥等もあります。<br />
+	操作する可能性のあるelementには<br />
+	かたっぱしからIDを割り振って、<br />
+	IDで操作しておけば間違いありません。<br />
+	<br />
+	これら汎用的な手法を取り入れつつ、<br />
+	今回は独自の高速化処理を施しています。<br />
+	‥‥というと凄そうに聞こえますが。<br />
+	<br />
+	今回は<br />
+	JavaScriptやCSSで用意した多数のギミックがあります。<br />
+	<br />
+	そのまま全部を動かすと実行速度が遅くなると考え、<br />
+	「画面に映っていないものは描画しない」<br />
+	という処理をJavaScriptで書いています。<br />
+	<br />
+	そのためには「画面内に要素が存在しているか」を適宜調べ、<br />
+	要素が存在していれば描画イベントを発火させるコードを書けばよいわけです。<br />
+	<br />
+	「画面内に要素が存在しているか」を調べるライブラリは<br />
+	既にいろんなものがあると思いますが、<br />
+	今回は簡単に自作してみました。<br />
+	結構ちゃんと動いているっぽいのでよかったです。<br />
+	<br />
+	えーと、その部分のコードは、<br />
+	かなりスパゲッティーコードになっているので‥‥<br />
+	<br />
+	かわりに、<br />
+	User Agent文字列を見て、ユーザーがモバイルかパソコンか判別するコードを貼ります。<br />
+	<br />
+	こちらは既存のライブラリを改造させていただきました。<br />
+	使い勝手はよいと思います。<br />
+	これによってモバイルからのアクセスの時は処理を減らしています。<br />
+	<br />
+	<br />
+	<a href="http://kazemachi.so/picture/mobiledetection.js" style="color:inherit;" target="_blank">ライブラリ mobiledetection.js</a>
+</div>
+
+<div style="font-size:1.5rem;padding:7rem 0 2rem 0;">
+	<img src="./shinbashi.jpg" style="max-width:100%;" alt="新橋" />
+</div>
+
+<div style="font-size:1.5rem;padding:7rem 0 2rem 0;">
+	以上ス。<br />
+</div>
+
+</body>
+</html>
