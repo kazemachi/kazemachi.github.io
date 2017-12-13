@@ -1123,14 +1123,16 @@ MqoMesh.prototype._parseFaces = function(num, text) {
     console.log('len = '+len);
     var face = { vNum: vertex_num };
 
-    for (var j = 0, len = info.length; j < len; ++j) {
-      var m = info[j].match(/([A-Za-z]+)\(([\w\s\-\.\(\)]+?)\)/);
-      var key = m[1].toLowerCase();
-      var value = m[2].split(' ');
-      value.forEach(function(elm, i, arr) {
-        arr[i] = Number(elm);
-      });
-      face[key] = value;
+	if(!info) {
+	    for (var j = 0, len = info.length; j < len; ++j) {
+	      var m = info[j].match(/([A-Za-z]+)\(([\w\s\-\.\(\)]+?)\)/);
+	      var key = m[1].toLowerCase();
+	      var value = m[2].split(' ');
+	      value.forEach(function(elm, i, arr) {
+	        arr[i] = Number(elm);
+	      });
+	      face[key] = value;
+	    }
     }
 
     // UV デフォルト値
