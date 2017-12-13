@@ -1144,17 +1144,19 @@ MqoMesh.prototype._parseFaces = function(num, text) {
     if (!face.m) face.m = [undefined];
 
     // ñ@ê¸åvéZ
-    if(face.v.length === 3) {
-      face.n = calcNormalize(this.vertices[face.v[0]], this.vertices[face.v[1]], this.vertices[face.v[2]]);
-
-    } else if(face.v.length === 4) {
-      var n1 = calcNormalize(this.vertices[face.v[0]], this.vertices[face.v[1]], this.vertices[face.v[2]]);
-      var n2 = calcNormalize(this.vertices[face.v[2]], this.vertices[face.v[3]], this.vertices[face.v[0]]);
-      face.n = [
-        (n1[0] + n2[0]) * 0.5,
-        (n1[1] + n2[1]) * 0.5,
-        (n1[2] + n2[2]) * 0.5
-      ]
+    if(!face.v) {
+	    if(face.v.length === 3) {
+	      face.n = calcNormalize(this.vertices[face.v[0]], this.vertices[face.v[1]], this.vertices[face.v[2]]);
+	
+	    } else if(face.v.length === 4) {
+	      var n1 = calcNormalize(this.vertices[face.v[0]], this.vertices[face.v[1]], this.vertices[face.v[2]]);
+	      var n2 = calcNormalize(this.vertices[face.v[2]], this.vertices[face.v[3]], this.vertices[face.v[0]]);
+	      face.n = [
+	        (n1[0] + n2[0]) * 0.5,
+	        (n1[1] + n2[1]) * 0.5,
+	        (n1[2] + n2[2]) * 0.5
+	      ]
+	    }
     } else {
       face.n = [0, 0, 0];
     }
