@@ -1123,7 +1123,7 @@ MqoMesh.prototype._parseFaces = function(num, text) {
     console.log('len = '+len);
     var face = { vNum: vertex_num };
 
-	if(!info) {
+	if(!info && !len) {
 	    for (var j = 0, len = info.length; j < len; ++j) {
 	      var m = info[j].match(/([A-Za-z]+)\(([\w\s\-\.\(\)]+?)\)/);
 	      var key = m[1].toLowerCase();
