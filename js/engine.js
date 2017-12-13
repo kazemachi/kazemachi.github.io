@@ -1145,6 +1145,7 @@ MqoMesh.prototype._parseFaces = function(num, text) {
 
     // ñ@ê¸åvéZ
     if(!face.v) {
+    	console.log('face.v = '+face.v);
 	    if(face.v.length === 3) {
 	      face.n = calcNormalize(this.vertices[face.v[0]], this.vertices[face.v[1]], this.vertices[face.v[2]]);
 	
