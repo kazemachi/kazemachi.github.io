@@ -1,6 +1,8 @@
 
 // kazemachi.so start.js utf-8
 
+console.log('start.js is loaded.');
+
 
 
 
