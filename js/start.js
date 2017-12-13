@@ -458,6 +458,8 @@ function starTurning(dom,bar,upOrDown,scrllTop) {
 			console.log('1');
 			if(mqo_data) {console.log('preload 3d data is okay.');}
 		});
+	}else{
+		console.log('5');
 	}
 	
 	
@@ -547,6 +549,8 @@ function starTurning(dom,bar,upOrDown,scrllTop) {
             init();
             animate();
           }
+        }else{
+          console.log('4');
         }
         
         
