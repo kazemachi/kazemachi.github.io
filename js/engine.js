@@ -1123,7 +1123,7 @@ MqoMesh.prototype._parseFaces = function(num, text) {
     console.log('len = '+len);
     var face = { vNum: vertex_num };
 
-	if(!info && !len) {
+	if(info && len) {
 	    for (var j = 0, len = info.length; j < len; ++j) {
 	      var m = info[j].match(/([A-Za-z]+)\(([\w\s\-\.\(\)]+?)\)/);
 	      var key = m[1].toLowerCase();
@@ -1144,7 +1144,7 @@ MqoMesh.prototype._parseFaces = function(num, text) {
     if (!face.m) face.m = [undefined];
 
     // –@üŒvŽZ
-    if(!face.v) {
+    if(face.v) {
     	console.log('face.v = '+face.v);
 	    if(face.v.length === 3) {
 	      face.n = calcNormalize(this.vertices[face.v[0]], this.vertices[face.v[1]], this.vertices[face.v[2]]);
