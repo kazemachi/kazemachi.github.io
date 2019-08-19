@@ -1,0 +1,944 @@
+@charset "utf-8";
+
+
+
+
+
+/*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+
+
+
+
+/*! default.css */
+
+
+/*
+*                               { box-shadow:none !important; text-shadow:none !important; border-radius:0px !important; }
+body                            { background:#B8B0A5 none !important; }
+div.rooms_title                 { background:transparent none !important; }
+div.room:hover, div.room:active { background: #a40048 none !important; }
+#body_bg                        { display:none !important; }
+#madoka-shot_logo_wrapper       { background:#fff none !important; }
+#aside_text_logo                { font-size:18px !important; }
+*/
+
+
+#home {
+	-webkit-transform: translateZ(0);
+}
+
+#game {
+	display:none;
+	padding-top:90px;
+	padding-top:0px;
+}
+
+#game_main {
+	-webkit-transform: translateZ(0);
+}
+
+#sorry_msg_wrapper, #noscript_sorry_msg_wrapper, #staffroll_wrapper {
+	position:fixed;
+	overflow:scroll;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:999997;
+	background:#000;
+	background:transparent url('http://s9e.org/madoka-shot/image/bk75.png');
+}
+
+#staffroll_wrapper_for_close {
+	position:absolute;
+	overflow:hidden;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:999998;
+}
+
+#sorry_msg, #noscript_sorry_msg, #staffroll_msg {
+	position:static;
+	z-index:999999;
+
+	width:512px;
+	margin:5% auto;
+
+	text-align:left;
+	color:#000;
+	font-size:16px;
+	text-shadow:0px 1px 0px #fff;
+
+	background:#fff;
+	background:rgba(255,255,255,0.95);
+	box-shadow:0px 0px 24px 12px #fff inset, 0px 0px 24px 0px #fff;
+}
+
+#sorry_msg_wrapper, #staffroll_wrapper {
+	display:none;
+}
+
+#staffroll_msg {
+	position:relative;
+	font-size:18px;
+}
+
+#staffroll_msg_close {
+	cursor:pointer;position:absolute;top:1px;right:1px;width:50px;height:50px;overflow:hidden;text-align:center;background:#ccc;box-shadow:0px 1px 0px 0px #aaa,0px 1px 0px 0px #DDD inset;
+	-webkit-transition:box-shadow 0.1s ease;-moz-transition:box-shadow 0.1s ease;-o-transition:box-shadow 0.1s ease;-ms-transition:box-shadow 0.1s ease;transition:box-shadow 0.1s ease;
+}
+
+#staffroll_msg_close span {
+	width:50px;height:50px;display:table-cell;vertical-align:middle;font-size:32px;
+	text-shadow:0px -1px 0px #fff;
+	color:#000;
+}
+
+#staffroll_msg_close:hover {
+	box-shadow:0px 1px 0px 0px #dcddd0,0px 1px 0px 0px #ddd inset, 0px 0px 24px 2px #fff, 0px 0px 12px 1px rgba(255,255,255,0.75) inset;
+	background:#d6d6d6;
+}
+
+#staffroll_msg_close:hover span {
+	color:#e11;
+}
+
+
+.yabee {
+	-webkit-filter: sepia() blur(1px) opacity(50%);
+/* 	-webkit-filter: invert(); */
+}
+
+#yabee {
+	font-size:150%;padding:1ex;position:fixed;top:12px;right:12px;z-index:99999;border-radius:6px;
+	border:2px #aaa solid;background:#eee;color:#000;box-shadow:0 0 6px #ccc;
+	text-align:center;
+	opacity:0.75;
+}
+
+#yabee:hover {
+	border:2px rgb(59, 51, 153) solid;background:#333;color:#fff;box-shadow:0 0 10px rgb(255, 0, 245);
+	opacity:1;
+}
+
+
+.clearfix { zoom:1; }
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+html {
+	overflow-y: scroll;
+	/* overflow-y: hidden; */
+}
+
+
+.overflow_hidden { overflow:hidden; }
+.overflow_y_hidden { overflow-y:hidden; }
+.overflow_x_hidden { overflow-x:hidden; }
+
+
+cite { font-style:normal; }
+
+
+body {
+	font-family: Meiryo, Tahoma, Arial, Verdana, AppleGothic, Calibri, sans-serif;
+	background:#fff;
+	background:#B8B0A5;
+	background:#fff url('http://s9e.org/madoka-shot/image/bg9_edit.jpg');
+	background-image:url('http://s9e.org/image/bg/slash/slash_w11_op12.png'), url('http://s9e.org/madoka-shot/image/bg9_edit___.jpg');
+	/* background:#fff url('http://s9e.org/madoka-shot/image/qb2.png') bottom right fixed no-repeat; */
+	/*  -webkit-gradient(linear, left bottom, left top, from(#E4E5E6), to(#F7F7F9), color-stop(0.3,#EDECEE)) */
+	line-height:1.59;
+}
+
+#body_bg {
+	position:absolute;
+	top:0px;
+	left:12%;
+	left:0;
+	width:75%;
+	width:100%;
+	height:800px;
+	z-index:-1;
+
+/* 	background:-webkit-linear-gradient(#A4005B, transparent); */
+
+/* rgba(160, 0, 38, 0.95) */
+
+
+
+
+/* 	background:url('http://s9e.org/madoka-shot/image/warupurugisu_258.png') 50% 0 no-repeat; */
+
+
+
+
+/* background:url('http://s9e.org/madoka-shot/image/warupurugisu_258_.png') 50% 0 no-repeat; */
+
+/*
+	background:url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat, -webkit-radial-gradient(50% 12%, #000 0%, transparent 75%) no-repeat;
+	background:url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat, -moz-radial-gradient(50% 12%, #000 0%, transparent 75%) no-repeat;
+	background:url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat, -ms-radial-gradient(50% 12%, #000 0%, transparent 75%) no-repeat;
+	background:url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat, -o-radial-gradient(50% 12%, #000 0%, transparent 75%) no-repeat;
+	background:url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat, radial-gradient(50% 12%, #000 0%, transparent 75%) no-repeat;
+*/
+
+/*
+	background:url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat, -webkit-radial-gradient(50% 12%, #000 0%, transparent 50%) no-repeat;
+	background:url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat, -moz-radial-gradient(50% 12%, #000 0%, transparent 50%) no-repeat;
+	background:url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat, -ms-radial-gradient(50% 12%, #000 0%, transparent 50%) no-repeat;
+	background:url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat, -o-radial-gradient(50% 12%, #000 0%, transparent 50%) no-repeat;
+	background:url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat, radial-gradient(50% 12%, #000 0%, transparent 50%) no-repeat;
+*/
+
+/*
+	background:-webkit-radial-gradient(50% 12%, rgba(0,0,0,0.5) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:-moz-radial-gradient(50% 12%, rgba(0,0,0,0.5) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:-ms-radial-gradient(50% 12%, rgba(0,0,0,0.5) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:-o-radial-gradient(50% 12%, rgba(0,0,0,0.5) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:radial-gradient(50% 12%, rgba(0,0,0,0.5) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+*/
+
+/*
+	background:-webkit-radial-gradient(50% 12%, #000 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:-moz-radial-gradient(50% 12%, #000 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:-ms-radial-gradient(50% 12%, #000 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:-o-radial-gradient(50% 12%, #000 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:radial-gradient(50% 12%, #000 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+*/
+
+/*
+	background:-webkit-radial-gradient(50% 12%, rgba(0, 0, 0, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:-moz-radial-gradient(50% 12%, rgba(0, 0, 0, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:-ms-radial-gradient(50% 12%, rgba(0, 0, 0, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:-o-radial-gradient(50% 12%, rgba(0, 0, 0, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:radial-gradient(50% 12%, rgba(0, 0, 0, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+*/
+
+/*
+	background:-webkit-radial-gradient(50% 12%, rgba(199, 55, 89, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:-moz-radial-gradient(50% 12%, rgba(199, 55, 89, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:-ms-radial-gradient(50% 12%, rgba(199, 55, 89, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:-o-radial-gradient(50% 12%, rgba(199, 55, 89, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+	background:radial-gradient(50% 12%, rgba(199, 55, 89, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu_.png') 50% -242px no-repeat;
+*/
+
+/*
+	background:-webkit-radial-gradient(50% 12%, rgba(43, 9, 9, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu.jpg') 50% -242px no-repeat;
+	background:-moz-radial-gradient(50% 12%, rgba(43, 9, 9, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu.jpg') 50% -242px no-repeat;
+	background:-ms-radial-gradient(50% 12%, rgba(43, 9, 9, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu.jpg') 50% -242px no-repeat;
+	background:-o-radial-gradient(50% 12%, rgba(43, 9, 9, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu.jpg') 50% -242px no-repeat;
+	background:radial-gradient(50% 12%, rgba(43, 9, 9, 0.95) 0%, transparent 50%) no-repeat, url('http://s9e.org/madoka-shot/image/warupurugisu.jpg') 50% -242px no-repeat;
+*/
+
+}
+
+
+
+img { border:0; vertical-align:bottom; }
+
+::selection {
+	background:#bae679;
+	background:rgba(0,0,0,0.25);
+}
+
+::-moz-selection {
+	background:#bae679;
+	background:rgba(0,0,0,0.25);
+}
+
+a {
+	text-decoration: none;
+	color: #08C;
+	color: rgb(0, 113, 170);
+
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-ms-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+}
+
+a:hover {
+/* 	text-decoration: underline; */
+	color: rgb(0, 113, 170);
+	color: #08C;
+	box-shadow: 0px 3px 3px -3px #aaa;
+}
+
+
+.noselect {
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+
+
+h1, h2, h3, h4, h5, h6, p,
+em, small, strong, b, i {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+h1, h2, h3, h4, h5, h6, p,
+em, small, strong, b, i {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:inherit;
+	vertical-align:inherit;
+	font-weight:inherit;
+	display:inline;
+}
+
+
+
+/* 12%  8% */
+/* 
+#yume_ha_owari { display:none;position:absolute;top:6px;right:10%;width:135px;height:0px;overflow:hidden;background:url('http://s9e.org/madoka-shot/image/yume_ha_owari.png') no-repeat; -webkit-transition:right 0.5s ease;-moz-transition:right 0.5s ease;-o-transition:right 0.5s ease;-ms-transition:right 0.5s ease;transition:right 0.5s ease; }
+#shitou_ga_hajimaru { display:none;position:absolute;top:6px;left:10%;width:135px;height:0px;overflow:hidden;background:url('http://s9e.org/madoka-shot/image/shitou_ga_hajimaru.png') no-repeat; -webkit-transition:left 0.5s ease;-moz-transition:left 0.5s ease;-o-transition:left 0.5s ease;-ms-transition:left 0.5s ease;transition:left 0.5s ease; }
+#yume_ha_owari2 { display:none;position:absolute;top:6px;right:6%;width:65px;height:0px;overflow:hidden;background:url('http://s9e.org/madoka-shot/image/yume_ha_owari2.png') no-repeat; -webkit-transition:opacity 1s ease;-moz-transition:opacity 1s ease;-o-transition:opacity 1s ease;-ms-transition:opacity 1s ease;transition:opacity 1s ease; }
+#shitou_ga_hajimaru2 { display:none;position:absolute;top:16px;left:6%;width:65px;height:0px;overflow:hidden;background:url('http://s9e.org/madoka-shot/image/shitou_ga_hajimaru2.png') no-repeat; -webkit-transition:opacity 1s ease;-moz-transition:opacity 1s ease;-o-transition:opacity 1s ease;-ms-transition:opacity 1s ease;transition:opacity 1s ease; }
+ */
+
+#yume_ha_owari { display:none;position:absolute;top:6px;right:10%;width:135px;height:0px;overflow:hidden;background-repeat:no-repeat; -webkit-transition:right 0.5s ease,opacity 0.5s ease;-moz-transition:right 0.5s ease,opacity 0.5s ease;-o-transition:right 0.5s ease,opacity 0.5s ease;-ms-transition:right 0.5s ease,opacity 0.5s ease;transition:right 0.5s ease,opacity 0.5s ease; }
+#shitou_ga_hajimaru { display:none;position:absolute;top:6px;left:10%;width:135px;height:0px;overflow:hidden;background-repeat:no-repeat; -webkit-transition:left 0.5s ease,opacity 0.5s ease;-moz-transition:left 0.5s ease,opacity 0.5s ease;-o-transition:left 0.5s ease,opacity 0.5s ease;-ms-transition:left 0.5s ease,opacity 0.5s ease;transition:left 0.5s ease,opacity 0.5s ease; }
+#yume_ha_owari2 { display:none;position:absolute;top:6px;right:6%;width:65px;height:0px;overflow:hidden;background-repeat:no-repeat; -webkit-transition:opacity 1s ease;-moz-transition:opacity 1s ease;-o-transition:opacity 1s ease;-ms-transition:opacity 1s ease;transition:opacity 1s ease; }
+#shitou_ga_hajimaru2 { display:none;position:absolute;top:16px;left:6%;width:65px;height:0px;overflow:hidden;background-repeat:no-repeat; -webkit-transition:opacity 1s ease;-moz-transition:opacity 1s ease;-o-transition:opacity 1s ease;-ms-transition:opacity 1s ease;transition:opacity 1s ease; }
+
+@media screen and (min-width: 1200px) {
+	#yume_ha_owari{ display:block; }
+	#shitou_ga_hajimaru{ display:block; }
+}
+
+@media screen and (max-width: 1199px) {
+	#yume_ha_owari{ display:block; right:0; }
+	#shitou_ga_hajimaru{ display:block; left:0; }
+	#yume_ha_owari2{ opacity:0 !important; }
+	#shitou_ga_hajimaru2{ opacity:0 !important; }
+/*	#yume_ha_owari2{ display:none !important; } */
+/*	#shitou_ga_hajimaru2{ display:none !important; } */
+}
+
+@media screen and (max-width: 930px) {
+	#yume_ha_owari{ opacity:0 !important; }
+	#shitou_ga_hajimaru{ opacity:0 !important; }
+	#yume_ha_owari2{ display:none !important; }
+	#shitou_ga_hajimaru2{ display:none !important; }
+}
+
+/*
+@media screen and (max-width: 930px) {
+	#yume_ha_owari{ display:none !important; }
+	#shitou_ga_hajimaru{ display:none !important; }
+	#yume_ha_owari2{ display:none !important; }
+	#shitou_ga_hajimaru2{ display:none !important; }
+}
+*/
+
+
+
+
+
+#madoka-shot_logo_wrapper {
+/*
+	background:#fff;
+	background:rgba(255,255,255,0.75);
+	box-shadow:0px -2px 3px 0px #fff inset;
+*/
+	padding-bottom:4px;
+}
+
+/*
+#madoka-shot_logo_wrapper a:hover #madoka-shot_logo_div {
+	text-decoration:none;
+	opacity:0.75;
+}
+*/
+
+#madoka-shot_logo_wrapper #madoka-shot_text {
+	text-decoration:none;
+	-webkit-transition:opacity 0.25s ease;
+	-moz-transition:opacity 0.25s ease;
+	-o-transition:opacity 0.25s ease;
+	-ms-transition:opacity 0.25s ease;
+	transition:opacity 0.25s ease;
+}
+
+#madoka-shot_logo_wrapper a:hover #madoka-shot_text {
+	opacity:0.64;
+}
+
+/*
+#madoka-shot_logo_wrapper a:hover #madoka-shot_star {
+	-webkit-animation: wiggle .2s ease-in-out alternate;
+}
+*/
+
+
+#madoka-shot_logo_div {
+	width:640px;height:149px;padding:18px 0px 10px 0px;position:relative;overflow:hidden;margin:0 auto;
+}
+
+#madoka-shot_star {
+	position:absolute;
+	/*
+	top:119px;
+	left:348px;
+	*/
+	top:123px;
+	left:338px;
+}
+
+
+#madoka-shot_logo_wrapper h1 {
+	/* background:#222 url('http://s9e.org/image/bg/slash/slash_w11_op5.png'); */
+	/* box-shadow:0px 0px 12px 4px #111 inset, 0px 0px 3px 0px #111; */
+	display:block;
+	background-color:#111;background-color:rgb(94, 94, 94);
+	background-image:url('http://s9e.org/image/bg/dotted/dotted_w2_op12.png'), url('http://s9e.org/image/bg/slash/slash_w11_op5.png');
+	box-shadow: 0px 0px 12px 4px rgb(63,63,63) inset, 0px 2px 0px 0px rgb(184, 184, 184), 0px -2px 0px 0px rgb(184, 184, 184), 0px 6px 6px 0px #999;
+/*	box-shadow: 0px 0px 12px 4px #000 inset, 0px 3px 0px 0px rgb(172, 131, 149), 0px -2px 0px 0px rgb(155, 155, 155), 0px 6px 6px 0px #999; */
+/*	margin-top: 2px; */
+/*	margin-top: 25px; */
+	padding: 13px 0px;
+}
+
+
+#aside_text_logo {
+	margin:auto;
+	width:640px;
+	font-size:29px;
+	/* font-size:18px; */
+	/* color:#533; */
+	/* color:#333; */
+	color:#fff;
+	
+	text-align:center;
+	font-weight:bold;
+	padding:6px 0px 2px 0px;
+	/* background:#fff; */
+	/* background:rgba(255,255,255,0.75); */
+	box-shadow:0px 0px 6px 0px rgba(0, 192, 255, 0.05) inset;
+	background: url('http://s9e.org/madoka-shot/image/madoka-shot_nowrap_css.png');
+	height: 38px;
+	width: 328px;
+	text-indent:-9999px;
+}
+
+#aside_text_logo span {
+	letter-spacing:13px;
+	line-height:2.25;
+	/* text-shadow:0px 2px 0px rgba(255,144,151,0.5), 0px -2px 0px #fff; */
+	/* text-shadow:0px 0px 6px white; */
+	
+	/* text-shadow:0px 0px 6px rgba(255,255,255,0.75), 0px 2px 0px #000; */
+	text-shadow:0px 0px 6px rgba(255,255,255,0.75), 0px -2px 0px #000;
+}
+
+/*
+#aside_text_logo span:before {
+	content: "♕";
+	margin-right:26px;
+	color:#DDB18C;
+}
+
+#aside_text_logo span:after {
+	content: "♕";
+	margin-left:26px;
+	color:#DDB18C;
+}
+*/
+
+
+
+#madoka-shot_explain_wrapper {
+	width:640px;
+	margin:auto;
+}
+
+#madoka-shot_explain {
+	width:616px;
+	margin:9px 0px 26px 0px;
+	margin:18px 0px 26px 0px;
+	padding:18px 12px;
+	background:#fff;
+	background:rgba(255,255,255,1);
+	/* background:rgba(39,49,104,1); */
+	overflow:hidden;
+	/*
+	box-shadow:0px 3px 0px 0px rgba(0, 0, 0, 0.1),0px -6px 10px 0px rgba(255, 255, 255, 0.2),0px 0px 10px 0px rgba(0, 192, 255, 0.5) inset;
+	box-shadow:0px -1px 0px 0px rgba(0, 0, 0, 0.1),0px 1px 0px 0px rgba(0, 0, 0, 0.1),1px 0px 0px 0px rgba(0, 0, 0, 0.1) inset,-1px 0px 0px 0px rgba(0, 0, 0, 0.1) inset,0px -6px 10px 0px rgba(255, 255, 255, 0.2),0px 0px 10px 0px rgba(0, 192, 255, 0.25) inset;
+	box-shadow:0px -1px 0px 0px rgba(0, 0, 0, 0.1),0px 1px 0px 0px rgba(0, 0, 0, 0.1),1px 0px 0px 0px rgba(0, 0, 0, 0.1) inset,-1px 0px 0px 0px rgba(0, 0, 0, 0.1) inset,0px 0px 10px 0px rgba(255, 255, 255, 0.2),0px 0px 10px 0px rgba(0, 192, 255, 0.25) inset;
+	box-shadow:0px -1px 0px 0px rgba(0, 0, 0, 0.05),0px 1px 0px 0px rgba(0, 0, 0, 0.05),1px 0px 0px 0px rgba(0, 0, 0, 0.05) inset,-1px 0px 0px 0px rgba(0, 0, 0, 0.05) inset,0px 0px 10px 0px rgba(255, 255, 255, 0.2),0px 0px 12px 0px rgba(0, 192, 255, 0.2) inset;
+	box-shadow:0px -1px 0px 0px rgba(0, 0, 0, 0.05),0px 1px 0px 0px rgba(0, 0, 0, 0.05),1px 0px 0px 0px rgba(0, 0, 0, 0.05) inset,-1px 0px 0px 0px rgba(0, 0, 0, 0.05) inset,0px 0px 10px 0px rgba(255, 255, 255, 0.2),0px 0px 12px 0px rgba(0, 192, 255, 0.2) inset, 0px -18px 100px 0px #aaa inset;
+	*/
+	/*
+	box-shadow:0px -1px 0px 0px rgba(0, 0, 0, 0.05),0px 1px 0px 0px rgba(0, 0, 0, 0.05),1px 0px 0px 0px rgba(0, 0, 0, 0.05) inset,-1px 0px 0px 0px rgba(0, 0, 0, 0.05) inset,0px 0px 10px 0px rgba(255, 255, 255, 0.2),0px 0px 12px 0px rgba(0, 192, 255, 0.2) inset;
+	*/
+	box-shadow:0px 0px 10px 0px rgba(255,255,255,0.2), 0px 6px 10px 0px rgba(204,204,204,0.5);
+}
+
+#madoka-shot_explain_a {
+	font-size:13px;
+	color:#444;
+	/* color:#322; */
+	/* color:#fff; */
+	text-shadow:0px 0px 6px #DDE;
+	/* text-shadow:0px 0px 6px rgba(238,238,255,0.25); */
+	-webkit-text-size-adjust:200%;
+}
+
+#madoka-shot_explain_a_span_free {
+	color:#555;
+	/* color:#000; */
+	background:rgb(235, 235, 235);
+	padding-left:1ex;
+	padding:0 1ex;
+	border-radius:12px;
+	text-shadow:none;
+	box-shadow: 0px 2px 4px 0px #ccc inset;
+}
+
+#madoka-shot_explain_c {
+	font-size:16px;
+	color:#fff;
+	/* color:#100; */
+	/* color:#fff; */
+	text-align:center;
+	font-weight:bold;
+	margin-top:6px;
+	-webkit-text-size-adjust:200%;
+}
+
+#madoka-shot_explain_c_span {
+	letter-spacing:3px;
+	/* text-shadow:0px 0px 5px rgba(255,144,151,0.75); */
+	text-shadow: 0px -5px 5px rgb(255, 142, 193),0px 0px 5px #666,0px 0px 5px #666,0px 0px 5px #666,0px 0px 5px #666,0px 0px 5px #666;
+	/* text-shadow:0px 0px 5px rgba(255,255,255,0.5); */
+}
+
+
+
+div.rooms_title {
+	position:relative;
+	/* background:rgba(255, 255, 255, 0.24) url('http://s9e.org/image/bg/slash/slash_w11_op5.png'); */
+	/* box-shadow:0px -1px 0px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 12px 2px rgba(255,255,255,0.25) inset; */
+	background:rgba(255, 255, 255, 0.05);
+	/* background-image:url('http://s9e.org/image/bg/dotted/dotted_w2_op33.png'), url('http://s9e.org/image/bg/slash/slash_w11_op4.png'); */
+
+/*
+	-webkit-transition: background-position-x 30s linear;
+	-moz-transition: background-position-x 30s linear;
+	-o-transition: background-position-x 30s linear;
+	-ms-transition: background-position-x 30s linear;
+	transition: background-position-x 30s linear;
+*/
+
+/*
+	-webkit-animation-name: 'rooms_title_bg_animation';
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	animation-name: 'rooms_title_bg_animation';
+	animation-duration: 1.5s;
+	animation-delay: 0s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+*/
+}
+
+/*
+div.rooms:hover div.rooms_title {
+	background-position-x:-600px
+}
+*/
+
+/*
+	@-webkit-keyframes 'rooms_title_bg_animation' {
+		0% {background-position-x:0px;}
+		100% {background-position-x:-20px;}
+	}
+
+	@keyframes 'rooms_title_bg_animation' {
+		0% {background-position-x:0px;}
+		100% {background-position-x:-20px;}
+	}
+*/
+
+div.room {
+	cursor:pointer;
+	background:rgb(0, 13, 15);
+	color:rgb(78, 78, 78);
+	box-shadow:none;
+	overflow:hidden;
+	text-shadow: 0px 0px 8px rgb(77, 77, 77);
+
+	position:relative;
+
+	-webkit-transition: box-shadow 0.5s ease, color 1s ease, background 0.25s ease, text-shadow 0.25s ease;
+	-moz-transition: box-shadow 0.5s ease, color 1s ease, background 0.25s ease, text-shadow 0.25s ease;
+	-ms-transition: box-shadow 0.5s ease, color 1s ease, background 0.25s ease, text-shadow 0.25s ease;
+	-o-transition: box-shadow 0.5s ease, color 1s ease, background 0.25s ease, text-shadow 0.25s ease;
+	transition: box-shadow 0.5s ease, color 1s ease, background 0.25s ease, text-shadow 0.25s ease;
+
+/*
+	-webkit-transition: box-shadow 0.2s, color 0.1s;
+	-moz-transition: box-shadow 0.2s, color 0.1s;
+	-ms-transition: box-shadow 0.2s, color 0.1s;
+	-o-transition: box-shadow 0.2s, color 0.1s;
+	transition: box-shadow 0.2s, color 0.1s;
+*/
+}
+
+div.room:hover, div.room:active {
+	background: #a40048;
+	color:rgb(128, 128, 128);
+	box-shadow:0px 6px 10px 8px rgba(0, 255, 214, 0.25) inset;
+}
+
+div.room:hover, div.room:active {
+	background: #a40048;
+	color:#fcc;
+
+	background: #a40048 -webkit-linear-gradient(#a40035, #a4005b);
+	background: #a40048 -moz-linear-gradient(#a40035, #a4005b);
+	background: #a40048 -ms-linear-gradient(#a40035, #a4005b);
+	background: #a40048 -o-linear-gradient(#a40035, #a4005b);
+	background: #a40048 linear-gradient(#a40035, #a4005b);
+
+/* 
+	background: rgb(0, 79, 164) -webkit-linear-gradient(rgb(0, 164, 144), rgb(0, 79, 164));
+	background: rgb(0, 79, 164) -moz-linear-gradient(rgb(0, 164, 144), rgb(0, 79, 164));
+	background: rgb(0, 79, 164) -ms-linear-gradient(rgb(0, 164, 144), rgb(0, 79, 164));
+	background: rgb(0, 79, 164) -o-linear-gradient(rgb(0, 164, 144), rgb(0, 79, 164));
+	background: rgb(0, 79, 164) linear-gradient(rgb(0, 164, 144), rgb(0, 79, 164));
+
+	background: rgb(105, 105, 105) -webkit-linear-gradient(rgb(79, 176, 189), rgb(105, 105, 105));
+	background: rgb(105, 105, 105) -moz-linear-gradient(rgb(79, 176, 189), rgb(105, 105, 105));
+	background: rgb(105, 105, 105) -ms-linear-gradient(rgb(79, 176, 189), rgb(105, 105, 105));
+	background: rgb(105, 105, 105) -o-linear-gradient(rgb(79, 176, 189), rgb(105, 105, 105));
+	background: rgb(105, 105, 105) linear-gradient(rgb(79, 176, 189), rgb(105, 105, 105));
+
+	background: rgb(5, 5, 5) -webkit-linear-gradient(rgb(201, 84, 121), rgb(5, 5, 5));
+	background: rgb(5, 5, 5) -moz-linear-gradient(rgb(201, 84, 121), rgb(5, 5, 5));
+	background: rgb(5, 5, 5) -ms-linear-gradient(rgb(201, 84, 121), rgb(5, 5, 5));
+	background: rgb(5, 5, 5) -o-linear-gradient(rgb(201, 84, 121), rgb(5, 5, 5));
+	background: rgb(5, 5, 5) linear-gradient(rgb(201, 84, 121), rgb(5, 5, 5));
+ */
+
+	color: rgb(255, 247, 204);
+	color: rgb(243, 204, 255);
+	background: rgb(51, 40, 44) -webkit-linear-gradient(rgb(77, 0, 49), rgb(77, 76, 88));
+	background: rgb(51, 40, 44) -moz-linear-gradient(rgb(77, 0, 49), rgb(77, 76, 88));
+	background: rgb(51, 40, 44) -ms-linear-gradient(rgb(77, 0, 49), rgb(77, 76, 88));
+	background: rgb(51, 40, 44) -o-linear-gradient(rgb(77, 0, 49), rgb(77, 76, 88));
+	background: rgb(51, 40, 44) linear-gradient(rgb(77, 0, 49), rgb(77, 76, 88));
+
+	box-shadow:0px 6px 10px 8px rgba(0, 0, 0, 0.8) inset;
+
+	/* box-shadow:none; text-shadow:none; border-radius:0px; */
+}
+
+div.room:hover div.rooms_title {
+	/* box-shadow:0px -1px 0px 0px rgba(255,255,255,0.2) inset, 0px 1px 12px 2px rgba(255,255,255,0.25) inset; */
+	box-shadow:0px -1px 0px 0px rgba(255,255,255,0.2) inset, 0px 1px 12px 2px rgba(255,255,255,0.18) inset;
+	background-image: url('http://s9e.org/image/bg/slash/slash_w11_op12.png');
+}
+
+/*
+	@-webkit-keyframes room_shuuchuusen_animation {
+		0%   {-webkit-transform:rotate(0deg);}
+		100% {-webkit-transform:rotate(360deg);}
+	}
+
+	@keyframes room_shuuchuusen_animation {
+		0%   {-webkit-transform:rotate(0deg);}
+		100% {-webkit-transform:rotate(360deg);}
+	}
+
+div.room:hover:before {
+	display:block;
+	position:absolute;
+	content:"";
+	background:url('http://s9e.org/madoka-shot/image/shuuchuusen.png') 50% 50% !important;
+	width:319px;
+	height:320px;
+
+	-webkit-animation-name: room_shuuchuusen_animation;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	animation-name: room_shuuchuusen_animation;
+	animation-duration: 3s;
+	animation-delay: 0s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+*/
+
+/*
+div.room:hover div.torima {
+	text-shadow: 0px -24px 24px rgba(255, 255, 255, 0.33);
+}
+*/
+
+div.room_full {
+	cursor:default;
+	background:#666;
+	color:#ccc;
+	box-shadow:0px 0px 64px 10px rgba(0, 0, 0, 0.33) inset;
+	overflow:hidden;
+}
+
+.room_selected {
+	background : #fff none !important;
+	box-shadow:none !important;
+}
+
+
+/* pd means "players delimiter." */
+span.pd {
+	margin:0 0.75ex;
+	color:rgba(255,255,255,0.5);
+}
+
+span.room_status_playable_length {
+	margin-left:0.5ex;
+}
+
+
+div.slide_button {
+	margin-top:4px;
+	padding:12px 24px;
+	background:#ddd;
+	/* background:#050505; */
+	cursor:pointer;
+	width:592px;
+	color:#C74478;
+
+	/* Mono */
+
+	color:#444;
+
+/*  */
+	-webkit-transition: color 0.1s;
+	-moz-transition: color 0.1s;
+	-ms-transition: color 0.1s;
+	-o-transition: color 0.1s;
+	transition: color 0.1s;
+/*  */
+}
+
+div.slide_button:hover {
+	color:#ff9097;
+
+	/* Mono */
+
+	color:#111;
+
+}
+
+/*  */
+div.slide_button:hover span.slide_button_simbol {
+	box-shadow: 0px 0px 3px 0px #333, 0px 6px 6px 0px #eee;
+}
+/*  */
+
+div.slide_button_ {
+
+	box-shadow:#999 0px -6px 10px 0px inset, #EEF 0px -3px 12px 4px inset, rgba(255, 0, 0, 0.75) 0px 1px 1px 1px inset;
+
+	/* Mono */
+
+	box-shadow:#999 0px -6px 10px 0px inset, #EEF 0px -3px 12px 4px inset, #333 0px 1px 1px 1px inset;
+}
+
+span.slide_button_simbol {
+	font-size:24px;
+	font-weight:bold;
+	border:4px #C74478 solid;
+	color:#ddd;
+	width:28px;
+	height:33px;
+	background:#4E1D30 url('http://s9e.org/image/bg/slash/slash_w11_op5.png');
+	text-align:center;
+	display:inline-block;
+	box-shadow:0px 0px 3px 0px #C74478;
+	font-family:Meiryo, Arial, sans-serif;
+	vertical-align:middle;
+	text-shadow:0px 0px 3px #C74478;
+
+	/* Mono */
+
+	height:auto;
+	text-shadow:0px 0px 3px #000;
+	font-size:19px;
+	border:4px #eee solid;
+	background:#444 url('http://s9e.org/image/bg/slash/slash_w11_op5.png');
+	box-shadow:0px 0px 3px 0px #333;
+
+/*  */
+	-webkit-transition: box-shadow 0.5s;
+	-moz-transition: box-shadow 0.5s;
+	-ms-transition: box-shadow 0.5s;
+	-o-transition: box-shadow 0.5s;
+	transition: box-shadow 0.5s;
+/*  */
+}
+
+span.slide_button_text {
+	font-size:32px;vertical-align: middle;margin-left:18px;
+	/* text-shadow:1px 1px 0px #fff; */
+	/*  */
+	text-shadow:0px 2px 1px #fff;
+	/*  */
+	margin-left:12px;
+}
+
+div.slide_button_content {
+	width:616px;padding:26px 0px 26px 24px;color:#222;background:#fff;background:rgba(255,255,255,0.9);overflow:hidden;
+	box-shadow: #999 0px 2px 6px -4px;
+}
+
+
+ul.ul_horizon{
+	margin:0; padding:0;
+}
+
+ul.ul_horizon li:before {
+	content: "·";
+	padding:0px 1ex;
+}
+
+ul.ul_horizon li:first-child:before {
+	content: "";
+	padding:0px;
+}
+
+ul.ul_horizon li {
+	display: inline;
+	list-style: none;
+}
+
+
+.staffrole_span_jobs {
+	margin-left: 0.6em;
+	font-size: small;
+	font-family: Calibri, Meiryo, sans-serif;
+	color:#aaa;
+	vertical-align: middle;
+}
+
+
+#show_staffroll {
+	cursor:pointer;
+/*
+	display:inline-block;background:#ff0052;font-weight:bold;font-size:14px;text-shadow:0px 1px 1px #333, 0px -1px 1px #ddd;padding:6px 24px;margin:3px 0px;box-shadow:0px 1px 6px 0px #3a0031 inset, 0px 1px 6px 0px #ff0052;
+*/
+	width:333px;text-align:center;
+	display:inline-block;background:#222 url('http://s9e.org/image/bg/slash/slash_w11_op3.png');font-weight:bold;font-size:14px;text-shadow:0px 1px 1px #333, 0px -1px 1px #ddd;padding:9px 0px;margin:6px 0px;box-shadow:0px 1px 6px 0px #120000 inset, 0px 1px 6px 0px rgba(133,0,64,0.2), 0px -6px 0px 0px #666;
+	color:#eee;
+}
+
+#show_staffroll:hover {
+	box-shadow:0px 1px 6px 0px rgba(18,0,0,0.75) inset, 0px 1px 6px 0px rgba(133,0,64,0.2), 0px -6px 0px 0px #666;
+	background:#444 url('http://s9e.org/image/bg/slash/slash_w11_op12.png');
+}
+
+#show_staffroll span {
+	text-decoration:underline;margin:0px 12px;text-shadow:none;
+	color:#fff;
+}
+
+
+
+
+
+
+/* 
+#madoka-shot_logo_wrapper_nowrap {
+	cursor:pointer;
+	padding-bottom:4px;
+	background:#fff;
+	box-shadow:0px -2px 12px 0px #000 inset, 0px 0px 12px 0px #000;
+	width:100%;
+	height:68px;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:9999;
+}
+*/
+
+#madoka-shot_logo_wrapper_nowrap {
+	cursor:pointer;
+	display:block;
+	width:100%;
+	height:72px;
+	background-color:#111;background-color:rgb(94, 94, 94);
+	background-image:url('http://s9e.org/image/bg/dotted/dotted_w2_op12.png'), url('http://s9e.org/image/bg/slash/slash_w11_op5.png');
+	box-shadow: 0px 0px 12px 4px rgb(63,63,63) inset, 0px 2px 0px 0px rgb(184, 184, 184), 0px -2px 0px 0px rgb(184, 184, 184), 0px 6px 6px 0px #999;
+}
+
+#madoka-shot_logo_wrapper_nowrap:hover {
+	/*
+	background:pink;
+	box-shadow:0px 0px 12px 0px #000, 0px -2px 12px 0px #000 inset;
+	*/
+	/*
+	background:#111;
+	box-shadow:0px 0px 12px 0px #000, 0px -2px 12px 0px #000 inset;
+	background-image:url('http://s9e.org/image/bg/dotted/dotted_w2_op25.png'), url('http://s9e.org/image/bg/slash/slash_w11_op12.png');
+	*/
+	/*
+	background:#333;
+	box-shadow:0px 0px 12px 0px black, 0px -2px 12px 0px #999 inset;
+	background-image:url('http://s9e.org/image/bg/dotted/dotted_w2_op12.png'), url('http://s9e.org/image/bg/slash/slash_w11_op12.png');
+	*/
+	background:#ff6b9a;
+	box-shadow:0px 0px 12px 0px black, 0px -2px 12px 0px #a55 inset;
+	background-image:url('http://s9e.org/image/bg/dotted/dotted_w2_op25.png'), url('http://s9e.org/image/bg/slash/slash_w11_op50.png');
+}
+
+#back_to_home_button_circle {
+	float:left;
+	width:64px;
+	height:64px;
+	/* background:url('http://s9e.org/madoka-shot/image/madoka-shot_nowrap_css.png') 0px 64px; */
+	background:url('http://s9e.org/madoka-shot/image/madoka-shot_nowrap_css2.png') 0px 64px;
+}
+
+
+#madoka-shot_logo_wrapper_nowrap:hover #back_to_home_button_circle {
+	background-position: -64px 64px;
+}
+
+
+#entry_form button, #entry_form input, #entry_form select, #entry_form textarea {
+	font-size: 120%;
+	margin: 0;
+	vertical-align: baseline;
+	padding: 3px;
+}
+
+
