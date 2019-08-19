@@ -22,7 +22,7 @@ $.ajaxSetup({ cache: false });
 $(document).ready(function (){
 	globalfunc();
 	after_ajax_func();
-//	$('body').append('<div style="position:absolute;bottom:0;left:0;width:1px;height:1px;overflow:hidden;z-index:-9999;"><embed src="http://www.youtube.com/v/ShQy7h7v83o?loop=1&autoplay=1&rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1" autostart="1" width="320" height="240" allowscriptaccess="never" wmode="transparent" /></div>');
+//	$('body').append('<div style="position:absolute;bottom:0;left:0;width:1px;height:1px;overflow:hidden;z-index:-9999;"><embed src="https://www.youtube.com/v/ShQy7h7v83o?loop=1&autoplay=1&rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1" autostart="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="320" height="240" allowscriptaccess="never" wmode="transparent" /></div>');
 });
 
 
@@ -334,8 +334,8 @@ if( $('#testpage_130228_1').size() > 0 ) {
 		      cn_youtube_src_flag = 1;
 		    }
 		    
-		    $('#profile_youtube_area_cn iframe').attr('src','http://www.youtube-nocookie.com/embed/vGIswJBe9PU?loop=1&autoplay=1&rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1');
-		    $('#profile_youtube_area_title_cn').html('<a href="http://www.youtube.com/watch?v=vGIswJBe9PU" target="_blank" rel="nofollow" title="Watch on YouTube">bgm : Final Fantasy 10 Music - Jecht Battle</a>');
+		    $('#profile_youtube_area_cn iframe').attr('src','https://www.youtube-nocookie.com/embed/vGIswJBe9PU?loop=1&autoplay=1&rel=0&showinfo=0&iv_load_policy=3&fs=0&disablekb=1');
+		    $('#profile_youtube_area_title_cn').html('<a href="https://www.youtube.com/watch?v=vGIswJBe9PU" target="_blank" rel="nofollow" title="Watch on YouTube">bgm : Final Fantasy 10 Music - Jecht Battle</a>');
 		    $('#clanmember_profile_image_div_cn img').attr('src','https://kazemachi.github.io/s9e.org/image/cn_prof_blood.png');
 		    $('#clanmember_profile_image_div_cn div').html('<span style="font-size:175%;opacity:0.5;">バァァァァヴ！！！？</span>');
 		    
